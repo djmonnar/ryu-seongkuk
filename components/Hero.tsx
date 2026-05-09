@@ -42,7 +42,7 @@ export function Hero() {
             </p>
           </div>
 
-          <div className="civic-panel ml-auto hidden max-w-[420px] p-5 text-ink backdrop-blur md:block" data-reveal>
+          <div className="civic-panel hidden max-w-[420px] p-5 text-ink backdrop-blur lg:absolute lg:bottom-8 lg:right-10 lg:block" data-reveal>
             <p className="civic-eyebrow">Changwon · Myunggok Bongnim</p>
             <h2 className="mt-3 text-3xl font-black leading-snug">{site.secondMessage}</h2>
             <p className="mt-3 text-sm font-bold leading-6 text-slate-600">{site.message}</p>
@@ -57,7 +57,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-1.5 md:absolute md:bottom-8 md:left-10 md:right-10 md:gap-2 lg:left-1/2 lg:max-w-7xl lg:-translate-x-1/2">
+          <div className="grid grid-cols-3 gap-1.5 md:absolute md:bottom-8 md:left-10 md:right-10 md:gap-2 lg:right-[470px] xl:right-[500px]">
             {quickStats.map((stat, index) => (
               <div
                 key={stat.label}
