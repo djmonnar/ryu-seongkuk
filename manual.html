@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>류성국 후보 홈페이지 기능 매뉴얼</title>
+    <meta name="description" content="류성국 후보 홈페이지의 주요 기능과 운영 방법을 안내하는 매뉴얼입니다." />
+    <style>
+      :root {
+        --blue: #004ea2;
+        --deep: #002b5e;
+        --sky: #26a7df;
+        --ink: #071a33;
+        --muted: #5d6b82;
+        --line: #dbe7f5;
+        --pale: #eef7ff;
+        --paper: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, #eef7ff 0%, #ffffff 34%, #f8fbff 100%);
+        color: var(--ink);
+        font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+        letter-spacing: 0;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .shell {
+        width: min(1080px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .hero {
+        padding: 34px 0 26px;
+        border-bottom: 1px solid rgba(0, 78, 162, 0.14);
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 42px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 900;
+      }
+
+      .badge {
+        display: grid;
+        width: 46px;
+        height: 46px;
+        place-items: center;
+        border-radius: 999px;
+        background: var(--blue);
+        color: #fff;
+        box-shadow: 0 14px 34px rgba(0, 78, 162, 0.2);
+      }
+
+      .home-link {
+        min-height: 42px;
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid rgba(0, 78, 162, 0.18);
+        border-radius: 999px;
+        padding: 0 18px;
+        background: #fff;
+        color: var(--blue);
+        font-size: 14px;
+        font-weight: 900;
+        text-decoration: none;
+        box-shadow: 0 10px 28px rgba(0, 43, 94, 0.08);
+      }
+
+      h1 {
+        max-width: 820px;
+        margin: 0;
+        font-size: clamp(38px, 7vw, 74px);
+        line-height: 1.02;
+        font-weight: 1000;
+      }
+
+      .lead {
+        max-width: 760px;
+        margin: 22px 0 0;
+        color: var(--muted);
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.8;
+      }
+
+      .meta-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .meta {
+        border: 1px solid rgba(0, 78, 162, 0.14);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.86);
+        padding: 18px;
+        box-shadow: 0 16px 40px rgba(0, 43, 94, 0.08);
+      }
+
+      .meta span,
+      .eyebrow {
+        display: block;
+        color: var(--blue);
+        font-size: 12px;
+        font-weight: 1000;
+        text-transform: uppercase;
+      }
+
+      .meta strong {
+        display: block;
+        margin-top: 7px;
+        font-size: 18px;
+      }
+
+      main {
+        padding: 44px 0 70px;
+      }
+
+      .toc {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+        margin-bottom: 34px;
+      }
+
+      .toc a {
+        min-height: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        background: var(--deep);
+        color: #fff;
+        font-size: 14px;
+        font-weight: 900;
+        text-decoration: none;
+      }
+
+      section {
+        margin-top: 18px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--paper);
+        padding: clamp(22px, 4vw, 34px);
+        box-shadow: 0 18px 50px rgba(0, 43, 94, 0.07);
+      }
+
+      h2 {
+        margin: 8px 0 0;
+        font-size: clamp(25px, 4vw, 36px);
+        line-height: 1.22;
+      }
+
+      h3 {
+        margin: 28px 0 10px;
+        font-size: 20px;
+      }
+
+      p {
+        color: var(--muted);
+        font-weight: 650;
+        line-height: 1.8;
+      }
+
+      ul,
+      ol {
+        margin: 14px 0 0;
+        padding-left: 22px;
+        color: var(--muted);
+        font-weight: 700;
+        line-height: 1.9;
+      }
+
+      li + li {
+        margin-top: 4px;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fbfdff;
+        padding: 18px;
+      }
+
+      .card strong {
+        display: block;
+        font-size: 17px;
+      }
+
+      .card p {
+        margin: 8px 0 0;
+        font-size: 14px;
+      }
+
+      code {
+        border-radius: 6px;
+        background: var(--pale);
+        color: var(--deep);
+        padding: 2px 6px;
+        font-family: "Cascadia Code", Consolas, monospace;
+        font-size: 0.92em;
+        font-weight: 800;
+      }
+
+      .notice {
+        margin-top: 18px;
+        border-left: 5px solid var(--blue);
+        border-radius: 8px;
+        background: var(--pale);
+        padding: 16px 18px;
+      }
+
+      .notice p {
+        margin: 0;
+        color: var(--deep);
+        font-size: 14px;
+        font-weight: 850;
+      }
+
+      footer {
+        padding: 28px 0;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 750;
+      }
+
+      @media (max-width: 760px) {
+        .topbar,
+        .brand {
+          align-items: flex-start;
+        }
+
+        .topbar {
+          flex-direction: column;
+        }
+
+        .meta-grid,
+        .toc,
+        .cards {
+          grid-template-columns: 1fr;
+        }
+
+        .home-link {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="shell">
+        <div class="topbar">
+          <div class="brand">
+            <span class="badge">1가</span>
+            <div>
+              <div>류성국 후보 홈페이지</div>
+              <div style="color: var(--blue); font-size: 13px">명곡·봉림 더불어민주당</div>
+            </div>
+          </div>
+          <a class="home-link" href="/">홈페이지로 돌아가기</a>
+        </div>
+        <h1>홈페이지 기능 매뉴얼</h1>
+        <p class="lead">
+          류성국 후보 홈페이지의 화면 구성, 주요 기능, 운영 시 확인해야 할 항목을 정리한 문서입니다.
+          캠프 내부 공유, 유지보수, 배포 확인용으로 사용하면 됩니다.
+        </p>
+        <div class="meta-grid">
+          <div class="meta">
+            <span>Domain</span>
+            <strong>류성국.kr</strong>
+          </div>
+          <div class="meta">
+            <span>Type</span>
+            <strong>정적 캠페인 홈페이지</strong>
+          </div>
+          <div class="meta">
+            <span>Maintainer</span>
+            <strong>짓마케팅 · 대표 서효승</strong>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="shell">
+      <nav class="toc" aria-label="매뉴얼 목차">
+        <a href="#structure">구성</a>
+        <a href="#features">기능</a>
+        <a href="#operation">운영</a>
+        <a href="#checklist">체크리스트</a>
+      </nav>
+
+      <section id="structure">
+        <span class="eyebrow">Structure</span>
+        <h2>페이지 구성</h2>
+        <div class="cards">
+          <div class="card">
+            <strong>메인 랜딩</strong>
+            <p>홈, 후보 소개, 명곡·봉림 소통지도까지 첫 화면 흐름에 배치했습니다.</p>
+          </div>
+          <div class="card">
+            <strong>햄버거 메뉴</strong>
+            <p>홈, 소개, 지도, 공약, 동네, 활동, 문의 페이지로 이동합니다.</p>
+          </div>
+          <div class="card">
+            <strong>분리 페이지</strong>
+            <p><code>/policies/</code>, <code>/district/</code>, <code>/activities/</code>, <code>/contact/</code>가 별도 화면으로 제공됩니다.</p>
+          </div>
+          <div class="card">
+            <strong>매뉴얼</strong>
+            <p>현재 문서는 <code>/manual.html</code>에서 확인할 수 있는 운영자용 안내 페이지입니다.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="features">
+        <span class="eyebrow">Features</span>
+        <h2>주요 기능</h2>
+        <h3>1. 메인 화면</h3>
+        <ul>
+          <li>PC와 모바일에 각각 최적화된 후보 메인 이미지를 사용합니다.</li>
+          <li>지역구, 인구, 세대 정보를 첫 화면에 노출합니다.</li>
+          <li>헤더에는 후보명, 기호, 더불어민주당 심볼, 햄버거 메뉴가 들어갑니다.</li>
+        </ul>
+
+        <h3>2. 유튜브 팝업</h3>
+        <ul>
+          <li>홈페이지 접속 시 로고송 유튜브 영상 팝업이 열립니다.</li>
+          <li>브라우저 정책 때문에 자동재생은 음소거 상태로 시도됩니다.</li>
+          <li><code>오늘 하루 보지 않기</code>를 누르면 해당 날짜에는 다시 뜨지 않습니다.</li>
+        </ul>
+
+        <h3>3. 네이버 지도 기반 소통지도</h3>
+        <ul>
+          <li>지역거점, 공약, 활동 필터로 지도 핀을 분류합니다.</li>
+          <li>핀 선택 시 제목, 지역, 좌표, 설명이 함께 표시됩니다.</li>
+          <li>네이버 지도 API 서비스 환경에는 운영 도메인과 개발 도메인이 등록되어야 합니다.</li>
+        </ul>
+
+        <h3>4. 공약 페이지</h3>
+        <ul>
+          <li>유튜브에서 확인한 공약 영상을 기준으로 카드형 공약을 구성했습니다.</li>
+          <li>각 공약 카드에는 공약명, 분야, 요약, 상태 문구, 영상 링크가 들어갑니다.</li>
+          <li>현재 반영된 공약은 포켓 주차장, 상생협의체, 제2외국어, 세금 감시, 불법 홍보관 퇴출입니다.</li>
+        </ul>
+
+        <h3>5. 공유 썸네일</h3>
+        <ul>
+          <li>카카오톡 공유용 이미지는 <code>/images/share-kakao.png</code>를 사용합니다.</li>
+          <li>문자·일반 공유용 이미지는 <code>/images/share-message.png</code>를 사용합니다.</li>
+          <li>카카오톡 미리보기가 바로 바뀌지 않으면 카카오 공유 디버거에서 캐시를 갱신해야 합니다.</li>
+        </ul>
+      </section>
+
+      <section id="operation">
+        <span class="eyebrow">Operation</span>
+        <h2>운영 방법</h2>
+        <h3>콘텐츠 수정 위치</h3>
+        <ul>
+          <li>후보명, 슬로건, 공약, 지도 핀, 인스타그램 주소는 <code>src/data/candidate.ts</code>에서 관리합니다.</li>
+          <li>이미지는 <code>public/images/</code>에 넣은 뒤 빌드하면 배포 루트의 <code>images/</code>로 복사됩니다.</li>
+          <li>푸터 저작권은 짓마케팅, 대표 서효승으로 표기되어 있습니다.</li>
+        </ul>
+
+        <h3>배포 흐름</h3>
+        <ol>
+          <li>소스 수정 후 <code>npm run build</code>로 정적 파일을 생성합니다.</li>
+          <li><code>out</code> 폴더의 결과물을 저장소 루트로 복사합니다.</li>
+          <li>GitHub에 커밋·푸시하면 GitHub Pages가 반영합니다.</li>
+          <li>커스텀 도메인 <code>류성국.kr</code>은 Pages 반영 후 몇 분 정도 캐시가 남을 수 있습니다.</li>
+        </ol>
+
+        <div class="notice">
+          <p>도메인, 네이버 지도 API, 카카오 공유 썸네일처럼 외부 서비스가 연결된 기능은 배포 후 실제 도메인에서 한 번씩 확인하는 것이 좋습니다.</p>
+        </div>
+      </section>
+
+      <section id="checklist">
+        <span class="eyebrow">Checklist</span>
+        <h2>수정 후 확인 체크리스트</h2>
+        <ul>
+          <li>PC와 모바일에서 헤더가 겹치지 않는지 확인합니다.</li>
+          <li>홈 첫 화면에서 후보 이미지와 통계 카드가 자연스럽게 보이는지 확인합니다.</li>
+          <li>유튜브 팝업의 닫기, 오늘 하루 보지 않기 버튼이 작동하는지 확인합니다.</li>
+          <li>햄버거 메뉴의 모든 링크가 정상 이동하는지 확인합니다.</li>
+          <li>네이버 지도 핀이 표시되고 필터 버튼이 작동하는지 확인합니다.</li>
+          <li>카카오톡 공유 시 제목, 설명, 썸네일이 의도대로 보이는지 확인합니다.</li>
+          <li>공약 영상 링크가 새 창으로 열리는지 확인합니다.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <div class="shell">Copyright © 짓마케팅. 대표 서효승. All rights reserved.</div>
+    </footer>
+  </body>
+</html>

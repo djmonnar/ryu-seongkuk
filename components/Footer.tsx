@@ -28,7 +28,10 @@ export function Footer() {
                 {link.label}
               </a>
             ))}
-              <a href="/contact/" className="transition hover:text-dem-blue">
+            <a href="/manual.html" className="transition hover:text-dem-blue">
+              기능 매뉴얼
+            </a>
+            <a href="/contact/" className="transition hover:text-dem-blue">
               개인정보처리방침
             </a>
           </nav>
