@@ -70,11 +70,75 @@ export const activities = [
   "공약 원문 공개 예정"
 ];
 
+export type MapCategory = "지역거점" | "공약" | "활동준비";
+
+export type MapPin = {
+  id: string;
+  title: string;
+  category: MapCategory;
+  district: string;
+  summary: string;
+  lat: number;
+  lng: number;
+  pinColor?: string;
+  status: string;
+};
+
+export const mapFilters = ["전체", "지역거점", "공약", "활동준비"] as const;
+
+export const mapPins: MapPin[] = [
+  {
+    id: "myeonggok-center",
+    title: "명곡동 행정복지센터 일대",
+    category: "지역거점",
+    district: "명곡동",
+    summary: "명곡동 생활권과 주민 소통 거점으로 표시한 초안 핀입니다.",
+    lat: 35.2588,
+    lng: 128.6371,
+    pinColor: "#004EA2",
+    status: "초안"
+  },
+  {
+    id: "bongnim-center",
+    title: "봉림동 행정복지센터 일대",
+    category: "지역거점",
+    district: "봉림동",
+    summary: "봉림동 생활권과 주민 소통 거점으로 표시한 초안 핀입니다.",
+    lat: 35.2447,
+    lng: 128.6857,
+    pinColor: "#26A7DF",
+    status: "초안"
+  },
+  {
+    id: "second-language",
+    title: "제2외국어 교육 접근성",
+    category: "공약",
+    district: "명곡·봉림",
+    summary: "대도시를 가지 않아도 배울 수 있는 교육 접근성 공약을 표시할 자리입니다.",
+    lat: 35.2513,
+    lng: 128.6601,
+    pinColor: "#E51B35",
+    status: "원문 확인 예정"
+  },
+  {
+    id: "tax-watch",
+    title: "깐깐한 세금 감시",
+    category: "공약",
+    district: "창원시 다선거구",
+    summary: "예산 감시 공약의 현장·의정 활동을 연결할 자리입니다.",
+    lat: 35.2381,
+    lng: 128.6811,
+    pinColor: "#003476",
+    status: "원문 확인 예정"
+  }
+];
+
 export const navLinks = [
   { label: "홈", href: "#top" },
   { label: "소개", href: "#profile" },
   { label: "공약", href: "#policies" },
   { label: "동네", href: "#district" },
+  { label: "지도", href: "#map" },
   { label: "활동", href: "#activities" },
   { label: "문의", href: "#contact" }
 ];
