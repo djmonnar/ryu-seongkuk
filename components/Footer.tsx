@@ -16,7 +16,7 @@ export function Footer() {
               본 페이지는 공개자료와 캠프 제공 자료를 바탕으로 후보 정보를 안내합니다.
             </p>
             <p className="mt-3 text-xs font-semibold text-slate-500">
-              Produced by <span className="font-black text-ink">Jitmarketing</span>
+              Copyright © <span className="font-black text-ink">짓마케팅</span>. 대표 서효승. All rights reserved.
             </p>
           </div>
 
