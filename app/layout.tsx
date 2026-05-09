@@ -5,7 +5,7 @@ import { site } from "@/src/data/candidate";
 import { assetPath } from "@/src/data/paths";
 import "./globals.css";
 
-const siteUrl = "https://djmonnar.github.io/ryu-seongkuk";
+const siteUrl = "https://xn--3e0b09thkg.kr";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
