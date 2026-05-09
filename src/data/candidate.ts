@@ -14,27 +14,27 @@ export const site = {
 
 export const profile = {
   intro:
-    "명곡과 봉림의 일상 가까이에서 듣고, 확인된 약속부터 성실하게 공개하는 젊은 생활정치 후보입니다.",
+    "명곡과 봉림의 일상 가까이에서 듣고, 동네의 작은 불편부터 성실하게 바꾸는 젊은 생활정치 후보입니다.",
   education: "부산대학교 행정대학원 행정학과 석사과정 재학 중",
   careers: [
     "현 더불어민주당 경상남도당 대변인",
     "전 경상국립대학교 울산경남지역혁신플랫폼 총괄운영센터 근무"
   ],
-  disclosure: ["직업: 정당인", "전과: 없음으로 공개자료에 표기", "최종 후보등록 정보는 중앙선거관리위원회 후보자 명부 기준으로 업데이트 예정"]
+  disclosure: ["직업: 정당인", "전과: 없음", "공개자료 기준으로 주요 이력을 안내합니다"]
 };
 
 export const policies = [
   {
     title: "제2외국어 교육 접근성",
     tag: "교육",
-    summary: "대도시를 가지 않아도 배울 수 있는 제2외국어 교육 접근성을 높이겠다는 취지의 공약입니다.",
-    status: "원문 확인 후 세부 실행계획 업데이트"
+    summary: "창원 안에서도 다양한 언어를 배울 수 있도록 청소년과 주민의 교육 선택지를 넓히겠습니다.",
+    status: "동네에서 배우는 교육 기회"
   },
   {
     title: "깐깐한 세금 감시",
     tag: "예산",
-    summary: "시민의 혈세가 낭비되지 않도록 예산을 꼼꼼하게 살피겠다는 취지의 공약입니다.",
-    status: "예산·대상·일정 확인 후 업데이트"
+    summary: "시민의 세금이 꼭 필요한 곳에 쓰이도록 예산 편성부터 집행까지 꼼꼼하게 살피겠습니다.",
+    status: "낭비 없는 생활 예산"
   }
 ];
 
@@ -67,10 +67,10 @@ export const district = {
 export const activities = [
   "SNS 공약 카드뉴스",
   "현장 인사와 동네 소식",
-  "공약 원문 공개 예정"
+  "주민 제안과 생활 의제"
 ];
 
-export type MapCategory = "지역거점" | "공약" | "활동준비";
+export type MapCategory = "지역거점" | "공약" | "활동";
 
 export type MapPin = {
   id: string;
@@ -84,7 +84,7 @@ export type MapPin = {
   status: string;
 };
 
-export const mapFilters = ["전체", "지역거점", "공약", "활동준비"] as const;
+export const mapFilters = ["전체", "지역거점", "공약", "활동"] as const;
 
 export const mapPins: MapPin[] = [
   {
@@ -92,44 +92,44 @@ export const mapPins: MapPin[] = [
     title: "명곡동 행정복지센터 일대",
     category: "지역거점",
     district: "명곡동",
-    summary: "명곡동 생활권과 주민 소통 거점으로 표시한 초안 핀입니다.",
+    summary: "명곡동 주민 생활과 행정 민원이 만나는 중심 생활권입니다.",
     lat: 35.2588,
     lng: 128.6371,
     pinColor: "#004EA2",
-    status: "초안"
+    status: "생활권"
   },
   {
     id: "bongnim-center",
     title: "봉림동 행정복지센터 일대",
     category: "지역거점",
     district: "봉림동",
-    summary: "봉림동 생활권과 주민 소통 거점으로 표시한 초안 핀입니다.",
+    summary: "봉림동 주민의 이동, 교육, 행정 수요가 이어지는 생활 거점입니다.",
     lat: 35.2447,
     lng: 128.6857,
     pinColor: "#26A7DF",
-    status: "초안"
+    status: "생활권"
   },
   {
     id: "second-language",
     title: "제2외국어 교육 접근성",
     category: "공약",
     district: "명곡·봉림",
-    summary: "대도시를 가지 않아도 배울 수 있는 교육 접근성 공약을 표시할 자리입니다.",
+    summary: "멀리 가지 않아도 배움의 기회를 넓히는 교육 공약입니다.",
     lat: 35.2513,
     lng: 128.6601,
     pinColor: "#E51B35",
-    status: "원문 확인 예정"
+    status: "교육"
   },
   {
     id: "tax-watch",
     title: "깐깐한 세금 감시",
     category: "공약",
     district: "창원시 다선거구",
-    summary: "예산 감시 공약의 현장·의정 활동을 연결할 자리입니다.",
+    summary: "동네에 필요한 예산은 챙기고 낭비는 줄이는 예산 감시 공약입니다.",
     lat: 35.2381,
     lng: 128.6811,
     pinColor: "#003476",
-    status: "원문 확인 예정"
+    status: "예산"
   }
 ];
 

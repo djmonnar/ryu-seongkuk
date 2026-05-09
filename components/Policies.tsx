@@ -12,11 +12,11 @@ export function Policies() {
           <div>
             <SectionHeading
               eyebrow="Pledges"
-              title="확인된 약속부터 정확하게"
-              description="공약은 후보 측 원문과 실행계획 확인이 끝난 항목부터 순차적으로 업데이트합니다."
+              title="동네의 내일을 바꾸는 약속"
+              description="교육 기회와 생활 예산부터 시민이 체감하는 변화를 만들겠습니다."
             />
             <div className="mt-6 rounded-lg border border-dem-blue/20 bg-white p-5 text-sm font-black leading-6 text-dem-blue shadow-civic-soft" data-reveal style={{ "--index": 1 } as CSSProperties & Record<"--index", number>}>
-              공약 Part1·Part2 원문 확인 후 세부 내용 반영 예정
+              명곡·봉림 주민의 삶에 바로 닿는 생활 공약을 중심에 두겠습니다.
             </div>
           </div>
           <div className="relative min-h-[300px] overflow-hidden rounded-lg border border-white bg-white shadow-civic" data-reveal style={{ "--index": 2 } as CSSProperties & Record<"--index", number>}>

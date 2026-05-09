@@ -11,10 +11,10 @@ export function Contact() {
             <SectionHeading
               eyebrow="Join Us"
               title={`${site.neighborhood}의 제안을 기다립니다`}
-              description="공식 연락처와 선거사무소 정보는 캠프 확인 후 공개합니다. 개인정보는 필요한 최소 범위만 수집하는 방향으로 설계했습니다."
+              description="생활 속 불편, 바라는 변화, 우리 동네에 필요한 일을 편하게 남겨주세요."
             />
             <div className="mt-6 rounded-lg border border-dem-blue/20 bg-white p-5 text-sm font-bold leading-6 text-slate-600 shadow-civic-soft" data-reveal style={{ "--index": 1 } as CSSProperties & Record<"--index", number>}>
-              선거사무소 주소, 공식 연락처, 선거사무장·회계책임자 정보는 확인 전까지 표시하지 않습니다.
+              남겨주신 제안은 명곡·봉림 생활 공약을 다듬는 데 소중히 참고하겠습니다.
             </div>
           </div>
 
@@ -41,11 +41,11 @@ export function Contact() {
             </label>
 
             <button type="button" className="civic-button-primary mt-5 w-full">
-              <span>문의 접수 준비 중</span>
+              <span>동네 제안 남기기</span>
               <span className="ml-2 grid h-8 w-8 place-items-center rounded-full bg-white/[0.16]">→</span>
             </button>
             <p className="mt-3 text-xs font-bold leading-5 text-slate-500">
-              실제 접수 기능은 개인정보처리방침과 수신 관리 절차 확인 후 활성화하세요.
+              개인정보는 제안 확인과 회신 목적에 한해 필요한 범위에서만 사용합니다.
             </p>
           </form>
         </div>

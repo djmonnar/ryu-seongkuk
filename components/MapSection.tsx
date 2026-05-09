@@ -57,10 +57,10 @@ export function MapSection() {
           <SectionHeading
             eyebrow="Communication Map"
             title="명곡·봉림 소통지도"
-            description="류성국 후보의 동네 거점과 공약 활동을 네이버 지도 위에서 한눈에 확인할 수 있도록 정리했습니다."
+            description="생활권, 공약, 현장 활동을 지도 위에서 한눈에 볼 수 있도록 정리했습니다."
           />
           <p className="rounded-lg border border-dem-blue/20 bg-white p-5 text-sm font-black leading-6 text-dem-blue shadow-civic-soft" data-reveal style={{ "--index": 1 } as CSSProperties & Record<"--index", number>}>
-            현재 핀은 캠프 확인 전 초안입니다. 실제 활동 좌표와 사진을 받으면 바로 교체할 수 있습니다.
+            우리 동네의 변화가 필요한 곳을 지도 위에서 함께 확인합니다.
           </p>
         </div>
 
@@ -98,9 +98,9 @@ export function MapSection() {
           <aside className="hidden lg:sticky lg:top-24 lg:block lg:self-start" aria-label="선택한 지도 핀 상세">
             {selectedPin ? <PinDetail pin={selectedPin} /> : null}
             <div className="civic-card mt-4 p-5">
-              <h3 className="text-base font-black text-ink">업데이트 예정</h3>
+              <h3 className="text-base font-black text-ink">소통지도 안내</h3>
               <p className="mt-3 text-sm font-bold leading-6 text-slate-600">
-                현장 활동 사진, 카드뉴스 링크, 실제 활동 좌표를 받으면 이 지도에서 바로 연결해 보여줄 수 있습니다.
+                생활권과 공약 의제를 연결해 명곡·봉림의 변화를 더 선명하게 보여드립니다.
               </p>
             </div>
           </aside>
