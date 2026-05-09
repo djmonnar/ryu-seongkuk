@@ -47,11 +47,11 @@ export function Hero() {
             <h2 className="mt-3 text-3xl font-black leading-snug">{site.secondMessage}</h2>
             <p className="mt-3 text-sm font-bold leading-6 text-slate-600">{site.message}</p>
             <div className="mt-5 grid grid-cols-2 gap-2">
-              <a href="#policies" className="civic-button-primary min-h-12 px-4 text-xs">
+              <a href="/policies/" className="civic-button-primary min-h-12 px-4 text-xs">
                 <span>공약 보기</span>
                 <span className="ml-2 grid h-7 w-7 place-items-center rounded-full bg-white/[0.16]">→</span>
               </a>
-              <a href="#profile" className="civic-button-outline min-h-12 px-4 text-xs">
+              <a href="/#profile" className="civic-button-outline min-h-12 px-4 text-xs">
                 후보 소개
               </a>
             </div>

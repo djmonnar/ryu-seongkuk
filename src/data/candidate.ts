@@ -133,12 +133,20 @@ export const mapPins: MapPin[] = [
   }
 ];
 
-export const navLinks = [
-  { label: "홈", href: "#top" },
-  { label: "소개", href: "#profile" },
-  { label: "공약", href: "#policies" },
-  { label: "동네", href: "#district" },
-  { label: "지도", href: "#map" },
-  { label: "활동", href: "#activities" },
-  { label: "문의", href: "#contact" }
+export const primaryNavLinks = [
+  { label: "홈", href: "/#top" },
+  { label: "소개", href: "/#profile" },
+  { label: "지도", href: "/#map" }
 ];
+
+export const menuLinks = [
+  { label: "홈", href: "/#top", description: "메인으로 돌아가기" },
+  { label: "소개", href: "/#profile", description: "후보 이력과 공개자료" },
+  { label: "지도", href: "/#map", description: "명곡·봉림 소통지도" },
+  { label: "공약", href: "/policies/", description: "생활 공약 자세히 보기" },
+  { label: "동네", href: "/district/", description: "명곡·봉림 생활권 정보" },
+  { label: "활동", href: "/activities/", description: "카드뉴스와 현장 소식" },
+  { label: "문의", href: "/contact/", description: "동네 제안 남기기" }
+];
+
+export const instagramUrl = "https://www.instagram.com/seongguk_ryu99?igsh=M2pnaHAwY3czd2d6";

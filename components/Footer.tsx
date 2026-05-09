@@ -1,4 +1,4 @@
-import { navLinks, site } from "@/src/data/candidate";
+import { menuLinks, site } from "@/src/data/candidate";
 
 export function Footer() {
   return (
@@ -13,7 +13,7 @@ export function Footer() {
               {site.party} {site.district} {site.neighborhood}
             </p>
             <p className="mt-4 text-xs font-bold leading-6 text-slate-500">
-              본 페이지의 후보 정보, 공약, 연락처는 캠프 원문 및 중앙선거관리위원회 후보자 명부 기준으로 업데이트합니다.
+              본 페이지는 공개자료와 캠프 제공 자료를 바탕으로 후보 정보를 안내합니다.
             </p>
             <p className="mt-3 text-xs font-semibold text-slate-500">
               Produced by <span className="font-black text-ink">Jitmarketing</span>
@@ -21,12 +21,12 @@ export function Footer() {
           </div>
 
           <nav className="flex flex-wrap gap-4 text-sm font-black text-slate-600 md:justify-end" aria-label="하단 메뉴">
-            {navLinks.map((link) => (
+            {menuLinks.map((link) => (
               <a key={link.href} href={link.href} className="transition hover:text-dem-blue">
                 {link.label}
               </a>
             ))}
-            <a href="#contact" className="transition hover:text-dem-blue">
+              <a href="/contact/" className="transition hover:text-dem-blue">
               개인정보처리방침
             </a>
           </nav>

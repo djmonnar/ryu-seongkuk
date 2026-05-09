@@ -1,5 +1,5 @@
 import type { CSSProperties } from "react";
-import { activities } from "@/src/data/candidate";
+import { activities, instagramUrl } from "@/src/data/candidate";
 
 export function Activities() {
   return (
@@ -30,12 +30,26 @@ export function Activities() {
         </div>
 
         <div className="mt-10 grid gap-4 md:grid-cols-[1.12fr_0.88fr]">
-          <a href="#contact" className="rounded-lg bg-white p-7 text-ink shadow-civic transition duration-500 hover:-translate-y-1 active:translate-y-0" data-reveal style={{ "--index": 1 } as CSSProperties & Record<"--index", number>}>
+          <a
+            href={instagramUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-lg bg-white p-7 text-ink shadow-civic transition duration-500 hover:-translate-y-1 active:translate-y-0"
+            data-reveal
+            style={{ "--index": 1 } as CSSProperties & Record<"--index", number>}
+          >
             <p className="text-sm font-black text-dem-blue">Instagram</p>
             <h3 className="mt-3 text-2xl font-black">카드뉴스와 현장 소식</h3>
             <p className="mt-3 text-sm font-bold leading-6 text-slate-600">짧고 정확한 콘텐츠로 공약과 동네 소식을 전하겠습니다.</p>
           </a>
-          <a href="#contact" className="rounded-lg bg-dem-blue p-7 text-white shadow-civic transition duration-500 hover:-translate-y-1 active:translate-y-0 md:mt-10" data-reveal style={{ "--index": 2 } as CSSProperties & Record<"--index", number>}>
+          <a
+            href="https://youtu.be/_9ftYhY6DhQ?si=mFfAgZzi8ihBRlee"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-lg bg-dem-blue p-7 text-white shadow-civic transition duration-500 hover:-translate-y-1 active:translate-y-0 md:mt-10"
+            data-reveal
+            style={{ "--index": 2 } as CSSProperties & Record<"--index", number>}
+          >
             <p className="text-sm font-black text-white/70">YouTube</p>
             <h3 className="mt-3 text-2xl font-black">현장의 목소리</h3>
             <p className="mt-3 text-sm font-bold leading-6 text-white/[0.72]">주민의 이야기를 듣고 정책으로 연결하는 과정을 담겠습니다.</p>
