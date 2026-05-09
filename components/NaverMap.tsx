@@ -144,7 +144,7 @@ export function NaverMap({ pins, selectedPin, onSelectPin }: NaverMapProps) {
       ) : null}
 
       {selectedPin ? (
-        <article className="absolute inset-x-3 bottom-3 rounded-lg border border-white/80 bg-white/96 p-4 shadow-[0_18px_50px_rgba(0,43,94,.22)] backdrop-blur-xl md:hidden">
+        <article className="absolute inset-x-3 bottom-3 rounded-lg border border-white/80 bg-white/[0.96] p-4 shadow-[0_18px_50px_rgba(0,43,94,.22)] backdrop-blur-xl md:hidden">
           <div className="flex flex-wrap items-center gap-2">
             <span className="rounded-full bg-dem-blue px-3 py-1 text-xs font-black text-white">{selectedPin.category}</span>
             <span className="rounded-full bg-dem-pale px-3 py-1 text-xs font-black text-dem-blue">{selectedPin.status}</span>
@@ -154,7 +154,7 @@ export function NaverMap({ pins, selectedPin, onSelectPin }: NaverMapProps) {
         </article>
       ) : null}
 
-      <div className="absolute left-4 top-4 rounded-full bg-white/95 px-4 py-2 text-xs font-black text-ink shadow-civic-soft backdrop-blur">
+      <div className="absolute left-4 top-4 rounded-full bg-white/[0.95] px-4 py-2 text-xs font-black text-ink shadow-civic-soft backdrop-blur">
         표시 중인 핀 {pins.length}개
       </div>
     </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Footer } from "@/components/Footer";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { SiteHeader } from "@/components/SiteHeader";
 import { site } from "@/src/data/candidate";
 import { assetPath } from "@/src/data/paths";
@@ -58,6 +59,7 @@ export default function RootLayout({
         <SiteHeader />
         {children}
         <Footer />
+        <ScrollReveal />
       </body>
     </html>
   );

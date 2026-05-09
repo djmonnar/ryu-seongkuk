@@ -11,10 +11,9 @@ const config: Config = {
       fontFamily: {
         sans: [
           "Pretendard",
-          "Apple SD Gothic Neo",
-          "Malgun Gothic",
-          "Noto Sans KR",
-          "Arial",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "system-ui",
           "sans-serif"
         ]
       },

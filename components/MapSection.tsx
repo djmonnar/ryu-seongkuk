@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import type { CSSProperties } from "react";
 import { useMemo, useState } from "react";
 import { mapFilters, mapPins, type MapCategory, type MapPin } from "@/src/data/candidate";
 import { assetPath } from "@/src/data/paths";
@@ -9,7 +10,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 
 function PinDetail({ pin }: { pin: MapPin }) {
   return (
-    <article className="civic-card p-5 shadow-civic">
+    <article className="civic-card p-5 shadow-civic" data-reveal>
       <div className="flex flex-wrap items-center gap-2">
         <span className="rounded-full bg-dem-blue px-3 py-1 text-xs font-black text-white">{pin.category}</span>
         <span className="rounded-full bg-dem-pale px-3 py-1 text-xs font-black text-dem-blue">{pin.status}</span>
@@ -50,7 +51,7 @@ export function MapSection() {
   }
 
   return (
-    <section id="map" className="bg-[linear-gradient(180deg,#ffffff_0%,#eef7ff_100%)] py-16 sm:py-20">
+    <section id="map" className="civic-section bg-[linear-gradient(180deg,#ffffff_0%,#eef7ff_100%)]">
       <div className="section-shell">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
@@ -58,12 +59,12 @@ export function MapSection() {
             title="명곡·봉림 소통지도"
             description="류성국 후보의 동네 거점과 공약 활동을 네이버 지도 위에서 한눈에 확인할 수 있도록 정리했습니다."
           />
-          <p className="rounded-lg border border-dem-blue/20 bg-white p-4 text-sm font-black leading-6 text-dem-blue shadow-civic-soft">
+          <p className="rounded-lg border border-dem-blue/20 bg-white p-5 text-sm font-black leading-6 text-dem-blue shadow-civic-soft" data-reveal style={{ "--index": 1 } as CSSProperties & Record<"--index", number>}>
             현재 핀은 캠프 확인 전 초안입니다. 실제 활동 좌표와 사진을 받으면 바로 교체할 수 있습니다.
           </p>
         </div>
 
-        <div className="relative mt-8 min-h-[250px] overflow-hidden rounded-lg border border-white bg-dem-pale shadow-civic md:min-h-[340px]">
+        <div className="relative mt-10 min-h-[250px] overflow-hidden rounded-lg border border-white bg-dem-pale shadow-civic md:min-h-[360px]" data-reveal style={{ "--index": 2 } as CSSProperties & Record<"--index", number>}>
           <Image
             src={assetPath("/images/district-map-visual.png")}
             alt="명곡·봉림 생활권을 상징하는 밝은 도시 일러스트"
@@ -73,7 +74,7 @@ export function MapSection() {
           />
         </div>
 
-        <div className="mt-8 flex gap-2 overflow-x-auto pb-2" aria-label="지도 핀 필터">
+        <div className="mt-8 flex gap-2 overflow-x-auto pb-2" aria-label="지도 핀 필터" data-reveal style={{ "--index": 3 } as CSSProperties & Record<"--index", number>}>
           {mapFilters.map((item) => (
             <button
               key={item}
@@ -82,7 +83,7 @@ export function MapSection() {
               className={
                 filter === item
                   ? "min-h-10 shrink-0 rounded-full bg-dem-blue px-4 text-sm font-black text-white shadow-[0_10px_24px_rgba(0,78,162,0.18)] focus:outline-none focus:ring-2 focus:ring-dem-blue focus:ring-offset-2"
-                  : "min-h-10 shrink-0 rounded-full border border-slate-300 bg-white px-4 text-sm font-black text-slate-700 transition hover:border-dem-blue hover:text-dem-blue focus:outline-none focus:ring-2 focus:ring-dem-blue focus:ring-offset-2"
+                  : "min-h-10 shrink-0 rounded-full border border-slate-300 bg-white px-4 text-sm font-black text-slate-700 transition duration-500 hover:border-dem-blue hover:text-dem-blue focus:outline-none focus:ring-2 focus:ring-dem-blue focus:ring-offset-2"
               }
               aria-pressed={filter === item}
             >
@@ -91,7 +92,7 @@ export function MapSection() {
           ))}
         </div>
 
-        <div className="mt-7 grid gap-5 lg:grid-cols-[1.35fr_0.65fr]">
+        <div className="mt-7 grid gap-5 lg:grid-cols-[1.35fr_0.65fr]" data-reveal style={{ "--index": 4 } as CSSProperties & Record<"--index", number>}>
           <NaverMap pins={filteredPins} selectedPin={selectedPin} onSelectPin={setSelectedId} />
 
           <aside className="hidden lg:sticky lg:top-24 lg:block lg:self-start" aria-label="선택한 지도 핀 상세">

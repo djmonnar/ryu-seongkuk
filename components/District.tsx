@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { district, site } from "@/src/data/candidate";
 import { SectionHeading } from "@/components/SectionHeading";
 
@@ -9,7 +10,7 @@ const totalStats = [
 
 export function District() {
   return (
-    <section id="district" className="bg-white py-16 sm:py-20">
+    <section id="district" className="civic-section bg-white">
       <div className="section-shell">
         <SectionHeading
           eyebrow="District"
@@ -18,18 +19,28 @@ export function District() {
           align="center"
         />
 
-        <div className="mt-8 grid gap-3 sm:grid-cols-3">
-          {totalStats.map((stat) => (
-            <div key={stat.label} className="rounded-lg bg-dem-deep p-5 text-white shadow-civic">
+        <div className="mt-10 grid gap-3 sm:grid-cols-3">
+          {totalStats.map((stat, index) => (
+            <div
+              key={stat.label}
+              className="rounded-lg bg-dem-deep p-5 text-white shadow-civic ring-1 ring-white/10"
+              data-reveal
+              style={{ "--index": index } as CSSProperties & Record<"--index", number>}
+            >
               <p className="text-sm font-black text-white/70">{stat.label}</p>
               <p className="mt-2 text-3xl font-black">{stat.value}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-6 grid gap-4 lg:grid-cols-2">
-          {district.towns.map((town) => (
-            <article key={town.name} className="civic-card civic-card-hover p-6">
+        <div className="mt-6 grid gap-4 lg:grid-cols-[0.92fr_1.08fr]">
+          {district.towns.map((town, index) => (
+            <article
+              key={town.name}
+              className={`civic-card civic-card-hover p-6 ${index === 1 ? "lg:mt-10" : ""}`}
+              data-reveal
+              style={{ "--index": index + 1 } as CSSProperties & Record<"--index", number>}
+            >
               <div className="flex flex-wrap items-center justify-between gap-3">
                 <h3 className="text-2xl font-black text-ink">{town.name}</h3>
                 <span className="rounded-full bg-dem-pale px-3 py-1 text-xs font-black text-dem-blue">{town.units}</span>

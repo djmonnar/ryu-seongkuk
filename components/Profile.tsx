@@ -1,24 +1,25 @@
+import type { CSSProperties } from "react";
 import { profile, site } from "@/src/data/candidate";
 import { SectionHeading } from "@/components/SectionHeading";
 
 export function Profile() {
   return (
-    <section id="profile" className="bg-white py-16 sm:py-20">
+    <section id="profile" className="civic-section bg-white">
       <div className="section-shell">
-        <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <SectionHeading
             eyebrow="Candidate"
             title={`${site.name}을 소개합니다`}
             description={profile.intro}
           />
 
-          <div className="grid gap-4">
-            <article className="civic-card p-6">
+          <div className="grid gap-4 lg:grid-cols-6">
+            <article className="civic-card civic-card-hover p-6 lg:col-span-6" data-reveal style={{ "--index": 1 } as CSSProperties & Record<"--index", number>}>
               <p className="text-sm font-black text-dem-blue">학력</p>
-              <h3 className="mt-3 text-2xl font-black leading-8 text-ink">{profile.education}</h3>
+              <h3 className="mt-3 text-2xl font-black leading-snug text-ink md:text-3xl">{profile.education}</h3>
             </article>
 
-            <article className="civic-card p-6">
+            <article className="civic-card civic-card-hover p-6 lg:col-span-4" data-reveal style={{ "--index": 2 } as CSSProperties & Record<"--index", number>}>
               <p className="text-sm font-black text-dem-blue">경력</p>
               <ul className="mt-4 grid gap-3 text-base font-bold leading-7 text-slate-700">
                 {profile.careers.map((career) => (
@@ -30,7 +31,7 @@ export function Profile() {
               </ul>
             </article>
 
-            <article className="rounded-lg border border-dem-blue/20 bg-dem-pale p-6">
+            <article className="rounded-lg border border-dem-blue/20 bg-dem-pale p-6 shadow-civic-soft lg:col-span-2" data-reveal style={{ "--index": 3 } as CSSProperties & Record<"--index", number>}>
               <p className="text-sm font-black text-dem-blue">공개자료 기준 안내</p>
               <ul className="mt-4 grid gap-2 text-sm font-bold leading-6 text-slate-700">
                 {profile.disclosure.map((item) => (
