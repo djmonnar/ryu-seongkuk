@@ -25,15 +25,17 @@ export const metadata: Metadata = {
     description: site.description,
     images: [
       {
-        url: `${siteUrl}/images/share-kakao.png`,
+        url: `${siteUrl}/images/share-kakao.jpg`,
         width: 1200,
         height: 630,
+        type: "image/jpeg",
         alt: `${site.name} 카카오톡 공유 썸네일`
       },
       {
-        url: `${siteUrl}/images/share-message.png`,
+        url: `${siteUrl}/images/share-message.jpg`,
         width: 1080,
         height: 1080,
+        type: "image/jpeg",
         alt: `${site.name} 문자 공유 썸네일`
       }
     ]
@@ -42,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${site.name} ${site.ballotLabel}`,
     description: site.description,
-    images: [`${siteUrl}/images/share-kakao.png`]
+    images: [`${siteUrl}/images/share-kakao.jpg`]
   },
   icons: {
     icon: assetPath("/images/hero-mobile.png")
