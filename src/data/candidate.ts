@@ -25,16 +25,39 @@ export const profile = {
 
 export const policies = [
   {
+    title: "포켓 주차장으로 주차난 해소",
+    tag: "교통",
+    summary: "동네 곳곳의 자투리 공간과 생활권 동선을 살펴 주민이 체감하는 주차 불편을 줄이겠습니다.",
+    status: "생활권 주차 해법",
+    videoUrl: "https://youtu.be/LdchRNzcp5I"
+  },
+  {
+    title: "한국·외국 거주민 상생협의체",
+    tag: "상생",
+    summary: "서로 다른 배경의 주민이 함께 안전하게 살아갈 수 있도록 소통과 협력의 창구를 만들겠습니다.",
+    status: "글로벌 안전 도시",
+    videoUrl: "https://youtu.be/1RgNQpAgZik"
+  },
+  {
     title: "제2외국어 교육 접근성",
     tag: "교육",
     summary: "창원 안에서도 다양한 언어를 배울 수 있도록 청소년과 주민의 교육 선택지를 넓히겠습니다.",
-    status: "동네에서 배우는 교육 기회"
+    status: "동네에서 배우는 교육 기회",
+    videoUrl: "https://youtu.be/l4pUQwiDBCU"
   },
   {
     title: "깐깐한 세금 감시",
     tag: "예산",
     summary: "시민의 세금이 꼭 필요한 곳에 쓰이도록 예산 편성부터 집행까지 꼼꼼하게 살피겠습니다.",
-    status: "낭비 없는 생활 예산"
+    status: "낭비 없는 생활 예산",
+    videoUrl: "https://youtu.be/3WXZyPo182g"
+  },
+  {
+    title: "불법 홍보관 퇴출",
+    tag: "민생",
+    summary: "주민 피해로 이어질 수 있는 불법·편법 홍보관 문제를 살피고 생활 안전을 지키겠습니다.",
+    status: "민생보호 공약",
+    videoUrl: "https://youtu.be/V-5oD5AiDBY"
   }
 ];
 
@@ -121,6 +144,28 @@ export const mapPins: MapPin[] = [
     status: "교육"
   },
   {
+    id: "pocket-parking",
+    title: "포켓 주차장으로 주차난 해소",
+    category: "공약",
+    district: "명곡·봉림",
+    summary: "생활권 안의 작은 공간부터 다시 살피는 주차난 완화 공약입니다.",
+    lat: 35.2565,
+    lng: 128.6483,
+    pinColor: "#005BAC",
+    status: "교통"
+  },
+  {
+    id: "resident-council",
+    title: "한국·외국 거주민 상생협의체",
+    category: "공약",
+    district: "창원시 다선거구",
+    summary: "다양한 주민이 함께 안전하게 살아가는 상생 도시 공약입니다.",
+    lat: 35.2478,
+    lng: 128.6717,
+    pinColor: "#0099D8",
+    status: "상생"
+  },
+  {
     id: "tax-watch",
     title: "깐깐한 세금 감시",
     category: "공약",
@@ -130,6 +175,17 @@ export const mapPins: MapPin[] = [
     lng: 128.6811,
     pinColor: "#003476",
     status: "예산"
+  },
+  {
+    id: "illegal-promo-center",
+    title: "불법 홍보관 퇴출",
+    category: "공약",
+    district: "명곡·봉림",
+    summary: "주민 피해를 막기 위한 민생보호 공약입니다.",
+    lat: 35.2418,
+    lng: 128.6546,
+    pinColor: "#E51B35",
+    status: "민생"
   }
 ];
 

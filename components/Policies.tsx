@@ -13,7 +13,7 @@ export function Policies() {
             <SectionHeading
               eyebrow="Pledges"
               title="동네의 내일을 바꾸는 약속"
-              description="교육 기회와 생활 예산부터 시민이 체감하는 변화를 만들겠습니다."
+              description="주차, 교육, 상생, 예산, 민생 안전까지 시민이 체감하는 변화를 만들겠습니다."
             />
             <div className="mt-6 rounded-lg border border-dem-blue/20 bg-white p-5 text-sm font-black leading-6 text-dem-blue shadow-civic-soft" data-reveal style={{ "--index": 1 } as CSSProperties & Record<"--index", number>}>
               명곡·봉림 주민의 삶에 바로 닿는 생활 공약을 중심에 두겠습니다.
@@ -30,11 +30,11 @@ export function Policies() {
           </div>
         </div>
 
-        <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-[1.08fr_0.92fr]">
+        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {policies.map((policy, index) => (
             <article
               key={policy.title}
-              className={`civic-card civic-card-hover overflow-hidden p-6 md:p-8 ${index === 0 ? "lg:min-h-[360px]" : "lg:mt-12 lg:min-h-[300px]"}`}
+              className="civic-card civic-card-hover flex min-h-[310px] flex-col overflow-hidden p-6 md:p-8"
               data-reveal
               style={{ "--index": index + 1 } as CSSProperties & Record<"--index", number>}
             >
@@ -44,7 +44,19 @@ export function Policies() {
               </div>
               <h3 className="mt-7 text-3xl font-black leading-snug text-ink">{policy.title}</h3>
               <p className="mt-4 text-base font-semibold leading-8 text-slate-600">{policy.summary}</p>
-              <p className="mt-6 rounded-lg bg-slate-50 px-4 py-3 text-sm font-black text-slate-600">{policy.status}</p>
+              <div className="mt-auto pt-6">
+                <p className="rounded-lg bg-slate-50 px-4 py-3 text-sm font-black text-slate-600">{policy.status}</p>
+                {policy.videoUrl ? (
+                  <a
+                    href={policy.videoUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-3 inline-flex min-h-11 items-center rounded-full bg-dem-blue px-5 text-sm font-black text-white shadow-civic-soft transition hover:-translate-y-0.5 hover:bg-[#003f86]"
+                  >
+                    공약 영상 보기
+                  </a>
+                ) : null}
+              </div>
             </article>
           ))}
         </div>
