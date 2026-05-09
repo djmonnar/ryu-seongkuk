@@ -5,8 +5,8 @@ import { assetPath } from "@/src/data/paths";
 
 const quickStats = [
   { label: "지역구", value: site.neighborhood },
-  { label: "합산 인구", value: district.total.population },
-  { label: "합산 세대", value: district.total.households }
+  { label: "인구", value: district.total.population },
+  { label: "세대", value: district.total.households }
 ];
 
 export function Hero() {
@@ -29,10 +29,10 @@ export function Hero() {
           sizes="100vw"
           className="object-cover object-top md:hidden"
         />
-        <div className="absolute inset-x-0 bottom-0 h-72 bg-gradient-to-t from-dem-deep via-dem-deep/[0.62] to-transparent md:h-56 md:from-white md:via-white/[0.58]" />
+        <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-dem-deep via-dem-deep/[0.46] to-transparent md:h-56 md:from-white md:via-white/[0.58]" />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,52,118,0.18)_0%,rgba(255,255,255,0)_42%,rgba(255,255,255,0)_100%)]" />
 
-        <div className="section-shell relative z-10 flex min-h-[calc(100dvh-80px)] flex-col justify-end pb-7 pt-8 md:min-h-[760px] md:pb-8">
+        <div className="section-shell relative z-10 flex min-h-[calc(100dvh-80px)] flex-col justify-end pb-5 pt-8 md:min-h-[760px] md:pb-8">
           <div className="sr-only">
             <h1>
               {site.name} {site.ballotLabel}
@@ -57,16 +57,18 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="grid gap-2 md:absolute md:bottom-8 md:left-10 md:right-10 md:grid-cols-3 lg:left-1/2 lg:max-w-7xl lg:-translate-x-1/2">
+          <div className="grid grid-cols-3 gap-1.5 md:absolute md:bottom-8 md:left-10 md:right-10 md:gap-2 lg:left-1/2 lg:max-w-7xl lg:-translate-x-1/2">
             {quickStats.map((stat, index) => (
               <div
                 key={stat.label}
-                className="civic-stat backdrop-blur-md"
+                className="civic-stat !p-2.5 text-center backdrop-blur-md md:!p-4 md:text-left"
                 data-reveal
                 style={{ "--index": index } as CSSProperties & Record<"--index", number>}
               >
-                <p className="text-xs font-black text-dem-blue">{stat.label}</p>
-                <p className="mt-1 text-xl font-black">{stat.value}</p>
+                <p className="text-[10px] font-black text-dem-blue md:text-xs">{stat.label}</p>
+                <p className="mt-0.5 whitespace-nowrap text-[clamp(15px,4vw,20px)] font-black leading-tight md:mt-1 md:text-xl">
+                  {stat.value}
+                </p>
               </div>
             ))}
           </div>

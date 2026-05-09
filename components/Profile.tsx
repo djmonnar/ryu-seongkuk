@@ -2,16 +2,15 @@ import type { CSSProperties } from "react";
 import { profile, site } from "@/src/data/candidate";
 import { SectionHeading } from "@/components/SectionHeading";
 
+const profileDescription =
+  "우리동네 젊은 일꾼 류성국은 명곡과 봉림의 오늘을 가까이에서 듣고, 주민의 일상에 필요한 변화를 빠르게 찾는 후보입니다. 작은 민원도 생활의 문제로 보고, 교육·교통·행정·예산을 젊은 감각과 성실한 실행력으로 챙기겠습니다.";
+
 export function Profile() {
   return (
     <section id="profile" className="civic-section bg-white">
       <div className="section-shell">
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-          <SectionHeading
-            eyebrow="Candidate"
-            title={`${site.name}을 소개합니다`}
-            description={profile.intro}
-          />
+          <SectionHeading eyebrow="Candidate" title={`${site.name}을 소개합니다`} description={profileDescription} />
 
           <div className="grid gap-4 lg:grid-cols-6">
             <article className="civic-card civic-card-hover p-6 lg:col-span-6" data-reveal style={{ "--index": 1 } as CSSProperties & Record<"--index", number>}>
