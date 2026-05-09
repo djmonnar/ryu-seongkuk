@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { menuLinks, primaryNavLinks, site } from "@/src/data/candidate";
+import { menuLinks, site } from "@/src/data/candidate";
 
 export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,36 +12,22 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-3 z-50 px-3">
-      <div className="section-shell flex h-[68px] max-w-6xl items-center justify-between gap-4 rounded-full border border-white/70 bg-white/[0.86] shadow-[0_18px_55px_rgba(0,43,94,0.13)] ring-1 ring-dem-blue/5 backdrop-blur-xl">
+      <div className="mx-auto flex h-[68px] w-full max-w-4xl items-center justify-between gap-4 rounded-full border border-white/70 bg-white/[0.88] px-5 shadow-[0_18px_55px_rgba(0,43,94,0.13)] ring-1 ring-dem-blue/5 backdrop-blur-xl sm:px-6">
         <a href="/#top" onClick={closeMenu} className="group flex min-w-0 items-center gap-3" aria-label="류성국 홈페이지 처음으로">
           <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-dem-blue text-lg font-black text-white shadow-[0_10px_26px_rgba(0,78,162,0.22)] transition duration-500 group-hover:scale-[1.04]">
             1가
           </span>
           <span className="min-w-0">
             <span className="block text-base font-black leading-tight text-ink sm:text-lg">{site.name}</span>
-            <span className="block truncate text-[11px] font-extrabold text-dem-blue sm:text-xs">{site.neighborhood} 더불어민주당</span>
+            <span className="block truncate text-[11px] font-extrabold text-dem-blue sm:text-xs">
+              {site.neighborhood} 더불어민주당
+            </span>
           </span>
-        </a>
-
-        <nav className="hidden items-center gap-1 text-sm font-black text-slate-700 lg:flex" aria-label="주요 메뉴">
-          {primaryNavLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="rounded-full px-3 py-2 transition duration-500 hover:bg-dem-pale hover:text-dem-blue focus:outline-none focus:ring-2 focus:ring-dem-blue focus:ring-offset-2"
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
-
-        <a href="/contact/" className="civic-button-primary hidden min-h-10 px-4 text-xs sm:inline-flex">
-          제안하기
         </a>
 
         <button
           type="button"
-          className="grid h-11 w-11 place-items-center rounded-full border border-slate-200 bg-white text-dem-deep shadow-sm transition duration-500 active:scale-[0.98]"
+          className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-slate-200 bg-white text-dem-deep shadow-sm transition duration-500 active:scale-[0.98]"
           aria-label={isOpen ? "메뉴 닫기" : "메뉴 열기"}
           aria-expanded={isOpen}
           onClick={() => setIsOpen((value) => !value)}
@@ -54,8 +40,8 @@ export function SiteHeader() {
         </button>
       </div>
 
-      <div className={`${isOpen ? "block" : "hidden"} mx-auto mt-2 max-w-6xl rounded-lg border border-white/70 bg-white/[0.94] shadow-civic backdrop-blur-xl`}>
-        <nav className="section-shell grid gap-2 py-4 text-sm font-black text-ink sm:grid-cols-2 lg:grid-cols-3" aria-label="전체 메뉴">
+      <div className={`${isOpen ? "block" : "hidden"} mx-auto mt-2 max-w-4xl rounded-lg border border-white/70 bg-white/[0.94] shadow-civic backdrop-blur-xl`}>
+        <nav className="grid gap-2 p-4 text-sm font-black text-ink sm:grid-cols-2 lg:grid-cols-3" aria-label="전체 메뉴">
           {menuLinks.map((link) => (
             <a
               key={link.href}
