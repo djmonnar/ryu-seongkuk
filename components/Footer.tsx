@@ -1,4 +1,5 @@
 import { menuLinks, site } from "@/src/data/candidate";
+import { assetPath } from "@/src/data/paths";
 
 export function Footer() {
   return (
@@ -6,6 +7,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl border-t border-slate-200 pt-8">
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
           <div className="max-w-2xl">
+            <img src={assetPath("/images/minjoo-logo.svg")} alt="더불어민주당" className="mb-4 h-10 w-auto" />
             <p className="text-2xl font-black text-ink">
               {site.name} <span className="text-dem-blue">{site.ballotLabel}</span>
             </p>

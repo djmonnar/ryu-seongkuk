@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { menuLinks, site } from "@/src/data/candidate";
+import { assetPath } from "@/src/data/paths";
 
 export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +19,10 @@ export function SiteHeader() {
             1가
           </span>
           <span className="min-w-0">
-            <span className="block text-base font-black leading-tight text-ink sm:text-lg">{site.name}</span>
+            <span className="flex items-center gap-2">
+              <span className="block text-base font-black leading-tight text-ink sm:text-lg">{site.name}</span>
+              <img src={assetPath("/images/minjoo-symbol.svg")} alt="더불어민주당" className="hidden h-5 w-auto sm:block" />
+            </span>
             <span className="block truncate text-[11px] font-extrabold text-dem-blue sm:text-xs">
               {site.neighborhood} 더불어민주당
             </span>
