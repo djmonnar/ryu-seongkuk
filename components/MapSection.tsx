@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { useMemo, useState } from "react";
 import { mapFilters, mapPins, type MapCategory, type MapPin } from "@/src/data/candidate";
+import { assetPath } from "@/src/data/paths";
 import { NaverMap } from "@/components/NaverMap";
 import { SectionHeading } from "@/components/SectionHeading";
 
@@ -59,6 +61,16 @@ export function MapSection() {
           <p className="rounded-lg border border-dem-blue/20 bg-white p-4 text-sm font-black leading-6 text-dem-blue shadow-civic-soft">
             현재 핀은 캠프 확인 전 초안입니다. 실제 활동 좌표와 사진을 받으면 바로 교체할 수 있습니다.
           </p>
+        </div>
+
+        <div className="relative mt-8 min-h-[250px] overflow-hidden rounded-lg border border-white bg-dem-pale shadow-civic md:min-h-[340px]">
+          <Image
+            src={assetPath("/images/district-map-visual.png")}
+            alt="명곡·봉림 생활권을 상징하는 밝은 도시 일러스트"
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
         </div>
 
         <div className="mt-8 flex gap-2 overflow-x-auto pb-2" aria-label="지도 핀 필터">
