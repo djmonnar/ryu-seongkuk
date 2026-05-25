@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { menuLinks, site } from "@/src/data/candidate";
+import { assets, menuLinks, site } from "@/src/data/candidate";
 import { assetPath } from "@/src/data/paths";
 
 export function SiteHeader() {
@@ -14,17 +14,17 @@ export function SiteHeader() {
   return (
     <header className="sticky top-3 z-50 px-3">
       <div className="mx-auto flex h-[68px] w-full max-w-4xl items-center justify-between gap-4 rounded-full border border-white/70 bg-white/[0.88] px-5 shadow-[0_18px_55px_rgba(0,43,94,0.13)] ring-1 ring-dem-blue/5 backdrop-blur-xl sm:px-6">
-        <a href="/#top" onClick={closeMenu} className="group flex min-w-0 items-center gap-3" aria-label="류성국 홈페이지 처음으로">
+        <a href="/#top" onClick={closeMenu} className="group flex min-w-0 items-center gap-3" aria-label={`${site.name} 홈페이지 처음으로`}>
           <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-dem-blue text-lg font-black text-white shadow-[0_10px_26px_rgba(0,78,162,0.22)] transition duration-500 group-hover:scale-[1.04]">
-            1가
+            {site.ballotBadge}
           </span>
           <span className="min-w-0">
             <span className="flex items-center gap-2">
               <span className="block text-base font-black leading-tight text-ink sm:text-lg">{site.name}</span>
-              <img src={assetPath("/images/minjoo-symbol.svg")} alt="더불어민주당" className="hidden h-5 w-auto sm:block" />
+              {assets.partySymbol ? <img src={assetPath(assets.partySymbol)} alt={site.party} className="hidden h-5 w-auto sm:block" /> : null}
             </span>
             <span className="block truncate text-[11px] font-extrabold text-dem-blue sm:text-xs">
-              {site.neighborhood} 더불어민주당
+              {site.neighborhood} {site.party}
             </span>
           </span>
         </a>

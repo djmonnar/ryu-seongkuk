@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { CHANGWON_CENTER, NAVER_MAP_CLIENT_ID } from "@/src/data/naverMap";
-import type { MapPin } from "@/src/data/candidate";
+import { NAVER_MAP_CLIENT_ID } from "@/src/data/naverMap";
+import { mapCenter, site, type MapPin } from "@/src/data/candidate";
 
 type NaverMapProps = {
   pins: MapPin[];
@@ -58,7 +58,7 @@ export function NaverMap({ pins, selectedPin, onSelectPin }: NaverMapProps) {
 
         const naverMaps = window.naver.maps;
         const map = new naverMaps.Map(mapElementRef.current, {
-          center: new naverMaps.LatLng(CHANGWON_CENTER.lat, CHANGWON_CENTER.lng),
+          center: new naverMaps.LatLng(mapCenter.lat, mapCenter.lng),
           zoom: 13,
           minZoom: 10,
           mapTypeId: naverMaps.MapTypeId?.NORMAL,
@@ -76,7 +76,7 @@ export function NaverMap({ pins, selectedPin, onSelectPin }: NaverMapProps) {
         const refreshMap = () => {
           if (cancelled || !mapElementRef.current) return;
           naverMaps.Event.trigger?.(map, "resize");
-          map.setCenter(new naverMaps.LatLng(CHANGWON_CENTER.lat, CHANGWON_CENTER.lng));
+          map.setCenter(new naverMaps.LatLng(mapCenter.lat, mapCenter.lng));
         };
 
         window.requestAnimationFrame(refreshMap);
@@ -124,7 +124,7 @@ export function NaverMap({ pins, selectedPin, onSelectPin }: NaverMapProps) {
 
   return (
     <div className="relative h-[560px] min-h-[560px] overflow-hidden rounded-lg border border-slate-200 bg-white shadow-civic md:h-[520px] md:min-h-[520px]">
-      <div ref={mapElementRef} className="h-full w-full" aria-label="네이버 지도 기반 명곡·봉림 소통지도" />
+      <div ref={mapElementRef} className="h-full w-full" aria-label={`네이버 지도 기반 ${site.neighborhood} 소통지도`} />
 
       {status === "loading" ? (
         <div className="absolute inset-0 grid place-items-center bg-dem-pale text-sm font-black text-ink">

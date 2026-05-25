@@ -1,4 +1,4 @@
-import { menuLinks, site } from "@/src/data/candidate";
+import { assets, menuLinks, site } from "@/src/data/candidate";
 import { assetPath } from "@/src/data/paths";
 
 export function Footer() {
@@ -7,7 +7,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl border-t border-slate-200 pt-8">
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
           <div className="max-w-2xl">
-            <img src={assetPath("/images/minjoo-logo.svg")} alt="더불어민주당" className="mb-4 h-10 w-auto" />
+            {assets.partyLogo ? <img src={assetPath(assets.partyLogo)} alt={site.party} className="mb-4 h-10 w-auto" /> : null}
             <p className="text-2xl font-black text-ink">
               {site.name} <span className="text-dem-blue">{site.ballotLabel}</span>
             </p>
@@ -15,10 +15,10 @@ export function Footer() {
               {site.party} {site.district} {site.neighborhood}
             </p>
             <p className="mt-4 text-xs font-bold leading-6 text-slate-500">
-              본 페이지는 공개자료와 캠프 제공 자료를 바탕으로 후보 정보를 안내합니다.
+              {site.footerNotice}
             </p>
             <p className="mt-3 text-xs font-semibold text-slate-500">
-              Copyright © <span className="font-black text-ink">짓마케팅</span>. 대표 서효승. All rights reserved.
+              {site.copyright}
             </p>
           </div>
 

@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { Footer } from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SiteHeader } from "@/components/SiteHeader";
-import { site } from "@/src/data/candidate";
+import { assets, site } from "@/src/data/candidate";
 import { assetPath } from "@/src/data/paths";
 import "./globals.css";
 
-const siteUrl = "https://xn--3e0b09thkg.kr";
+const siteUrl = site.siteUrl;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -25,14 +25,14 @@ export const metadata: Metadata = {
     description: site.description,
     images: [
       {
-        url: `${siteUrl}/images/share-kakao.jpg`,
+        url: `${siteUrl}${assets.shareKakao}`,
         width: 1200,
         height: 630,
         type: "image/jpeg",
         alt: `${site.name} 카카오톡 공유 썸네일`
       },
       {
-        url: `${siteUrl}/images/share-message.jpg`,
+        url: `${siteUrl}${assets.shareMessage}`,
         width: 1080,
         height: 1080,
         type: "image/jpeg",
@@ -44,10 +44,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${site.name} ${site.ballotLabel}`,
     description: site.description,
-    images: [`${siteUrl}/images/share-kakao.jpg`]
+    images: [`${siteUrl}${assets.shareKakao}`]
   },
   icons: {
-    icon: assetPath("/images/hero-mobile.png")
+    icon: assetPath(assets.heroMobile)
   },
   formatDetection: {
     telephone: true,

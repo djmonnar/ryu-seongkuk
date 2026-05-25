@@ -1,5 +1,5 @@
 import type { CSSProperties } from "react";
-import { site } from "@/src/data/candidate";
+import { sections } from "@/src/data/candidate";
 import { SectionHeading } from "@/components/SectionHeading";
 
 export function Contact() {
@@ -10,11 +10,11 @@ export function Contact() {
           <div>
             <SectionHeading
               eyebrow="Join Us"
-              title={`${site.neighborhood}의 제안을 기다립니다`}
-              description="생활 속 불편, 바라는 변화, 우리 동네에 필요한 일을 편하게 남겨주세요."
+              title={sections.contactTitle}
+              description={sections.contactDescription}
             />
             <div className="mt-6 rounded-lg border border-dem-blue/20 bg-white p-5 text-sm font-bold leading-6 text-slate-600 shadow-civic-soft" data-reveal style={{ "--index": 1 } as CSSProperties & Record<"--index", number>}>
-              남겨주신 제안은 명곡·봉림 생활 공약을 다듬는 데 소중히 참고하겠습니다.
+              {sections.contactNote}
             </div>
           </div>
 

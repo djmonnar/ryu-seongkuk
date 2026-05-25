@@ -1,5 +1,5 @@
 import type { CSSProperties } from "react";
-import { district, site } from "@/src/data/candidate";
+import { district, sections } from "@/src/data/candidate";
 import { SectionHeading } from "@/components/SectionHeading";
 
 const totalStats = [
@@ -14,8 +14,8 @@ export function District() {
       <div className="section-shell">
         <SectionHeading
           eyebrow="District"
-          title={`우리동네 ${site.neighborhood}`}
-          description="명곡과 봉림의 생활권 정보를 한눈에 확인할 수 있도록 정리했습니다."
+          title={sections.districtTitle}
+          description={sections.districtDescription}
           align="center"
         />
 
@@ -60,7 +60,7 @@ export function District() {
                 </div>
               </dl>
               <p className="mt-5 text-sm font-bold leading-6 text-slate-600">{town.note}</p>
-              <p className="mt-4 text-xs font-bold text-slate-400">2026년 4월말 기준 공개자료</p>
+              <p className="mt-4 text-xs font-bold text-slate-400">{district.sourceLabel}</p>
             </article>
           ))}
         </div>

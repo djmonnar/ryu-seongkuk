@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { CSSProperties } from "react";
-import { district, site } from "@/src/data/candidate";
+import { assets, district, sections, site } from "@/src/data/candidate";
 import { assetPath } from "@/src/data/paths";
 
 const quickStats = [
@@ -14,16 +14,16 @@ export function Hero() {
     <section id="top" className="relative -mt-[80px] overflow-hidden bg-dem-deep pt-[80px] text-white">
       <div className="relative min-h-[calc(100dvh-80px)] overflow-hidden md:min-h-[760px]">
         <Image
-          src={assetPath("/images/hero-wide.png")}
-          alt="우리동네 젊은 일꾼 류성국 후보"
+          src={assetPath(assets.heroWide)}
+          alt={`${site.name} 후보 대표 이미지`}
           fill
           priority
           sizes="100vw"
           className="hidden object-cover object-center md:block"
         />
         <Image
-          src={assetPath("/images/hero-mobile.png")}
-          alt="우리동네 젊은 일꾼 류성국 후보"
+          src={assetPath(assets.heroMobile)}
+          alt={`${site.name} 후보 모바일 대표 이미지`}
           fill
           priority
           sizes="100vw"
@@ -43,7 +43,7 @@ export function Hero() {
           </div>
 
           <div className="civic-panel hidden max-w-[420px] p-5 text-ink backdrop-blur lg:absolute lg:bottom-8 lg:right-10 lg:block" data-reveal>
-            <p className="civic-eyebrow">Changwon · Myunggok Bongnim</p>
+            <p className="civic-eyebrow">{sections.heroEyebrow}</p>
             <h2 className="mt-3 text-3xl font-black leading-snug">{site.secondMessage}</h2>
             <p className="mt-3 text-sm font-bold leading-6 text-slate-600">{site.message}</p>
             <div className="mt-5 grid grid-cols-2 gap-2">

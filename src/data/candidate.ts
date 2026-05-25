@@ -1,97 +1,124 @@
 export const site = {
-  name: "류성국",
-  hanja: "柳星國",
-  party: "더불어민주당",
-  district: "창원시 다선거구",
-  neighborhood: "명곡·봉림",
-  ballotLabel: "창원시의원 후보 1-가",
-  slogan: "성실한 아들, 일 잘하는 우리동네 젊은 일꾼",
-  message: "생각이 달라도 다 함께 살아갈 시민이다.",
-  secondMessage: "시민의 삶을 바꾸는 정치!",
-  election: "2026년 제9회 전국동시지방선거",
-  description: "더불어민주당 창원시 다선거구 명곡·봉림 류성국 시의원 후보 홈페이지"
+  name: "후보명",
+  hanja: "",
+  party: "정당명",
+  district: "선거구명",
+  neighborhood: "지역명",
+  ballotLabel: "기호 0번",
+  ballotBadge: "0",
+  slogan: "대표 슬로건을 입력하세요",
+  message: "후보자의 핵심 메시지를 입력하세요.",
+  secondMessage: "지역의 내일을 준비합니다",
+  election: "선거명을 입력하세요",
+  description: "국회의원·지방선거 후보 홈페이지 템플릿입니다. src/data/candidate.ts에서 후보 정보를 입력하세요.",
+  siteUrl: "https://example.com",
+  copyright: "Copyright © 짓마케팅. All rights reserved.",
+  footerNotice: "본 페이지는 공개자료와 캠프 제공 자료를 바탕으로 후보 정보를 안내합니다."
+};
+
+export const assets = {
+  heroWide: "/images/hero-wide.png",
+  heroMobile: "/images/hero-mobile.png",
+  partySymbol: "/images/minjoo-symbol.svg",
+  partyLogo: "/images/minjoo-logo.svg",
+  policyVisual: "/images/policy-education-visual.png",
+  mapVisual: "/images/district-map-visual.png",
+  shareKakao: "/images/share-kakao.jpg",
+  shareMessage: "/images/share-message.jpg"
+};
+
+export const sections = {
+  heroEyebrow: "Candidate Homepage Template",
+  profileTitle: `${site.name}을 소개합니다`,
+  policiesTitle: "지역의 내일을 바꾸는 약속",
+  policiesDescription: "공약 제목, 요약, 추진 방향을 입력하면 카드 형태로 자동 정리됩니다.",
+  policiesNote: "이 영역에는 후보자의 핵심 공약을 입력하세요.",
+  districtTitle: `우리 지역 ${site.neighborhood}`,
+  districtDescription: "지역구 생활권 정보를 한눈에 확인할 수 있도록 정리합니다.",
+  mapTitle: `${site.neighborhood} 소통지도`,
+  mapDescription: "생활권, 공약, 현장 활동을 지도 위에서 보여줍니다.",
+  mapNote: "후보자의 주요 활동 지점과 지역 현안을 지도에 표시하세요.",
+  mapGuideTitle: "소통지도 안내",
+  mapGuideDescription: "지역 이슈와 공약 의제를 연결해 유권자에게 더 선명하게 보여줍니다.",
+  activitiesTitle: "현장에서 시작하는 변화",
+  activitiesDescription: "현장 일정, 카드뉴스, 주민 제안 활동을 입력하세요.",
+  contactTitle: `${site.neighborhood}의 제안을 기다립니다`,
+  contactDescription: "생활 속 불편, 바라는 변화, 지역에 필요한 일을 편하게 남겨주세요.",
+  contactNote: "남겨주신 제안은 정책과 활동 계획을 다듬는 데 참고하겠습니다."
 };
 
 export const profile = {
-  intro:
-    "명곡과 봉림의 일상 가까이에서 듣고, 동네의 작은 불편부터 성실하게 바꾸는 젊은 생활정치 후보입니다.",
-  education: "부산대학교 행정대학원 행정학과 석사과정 재학 중",
-  careers: [
-    "현 더불어민주당 경상남도당 대변인",
-    "전 경상국립대학교 울산경남지역혁신플랫폼 총괄운영센터 근무"
-  ],
-  disclosure: ["직업: 정당인", "전과: 없음", "공개자료 기준으로 주요 이력을 안내합니다"]
+  intro: "후보자의 인사말과 소개 문장을 입력하세요. 어떤 지역에서 어떤 변화를 만들 사람인지 한 문단으로 정리하면 좋습니다.",
+  education: "학력 정보를 입력하세요",
+  careers: ["주요 경력 1", "주요 경력 2", "주요 경력 3"],
+  disclosure: ["직업: 입력 전", "전과: 입력 전", "재산/병역/납세 등 공개자료 기준 안내 문구 입력"]
 };
 
 export const policies = [
   {
-    title: "포켓 주차장으로 주차난 해소",
-    tag: "교통",
-    summary: "동네 곳곳의 자투리 공간과 생활권 동선을 살펴 주민이 체감하는 주차 불편을 줄이겠습니다.",
-    status: "생활권 주차 해법",
-    videoUrl: "https://youtu.be/LdchRNzcp5I"
+    title: "공약 제목 1",
+    tag: "분야",
+    summary: "공약의 핵심 내용을 2~3문장으로 입력하세요.",
+    status: "추진 방향 또는 상태",
+    videoUrl: ""
   },
   {
-    title: "한국·외국 거주민 상생협의체",
-    tag: "상생",
-    summary: "서로 다른 배경의 주민이 함께 안전하게 살아갈 수 있도록 소통과 협력의 창구를 만들겠습니다.",
-    status: "글로벌 안전 도시",
-    videoUrl: "https://youtu.be/1RgNQpAgZik"
+    title: "공약 제목 2",
+    tag: "분야",
+    summary: "공약의 핵심 내용을 2~3문장으로 입력하세요.",
+    status: "추진 방향 또는 상태",
+    videoUrl: ""
   },
   {
-    title: "제2외국어 교육 접근성",
-    tag: "교육",
-    summary: "창원 안에서도 다양한 언어를 배울 수 있도록 청소년과 주민의 교육 선택지를 넓히겠습니다.",
-    status: "동네에서 배우는 교육 기회",
-    videoUrl: "https://youtu.be/l4pUQwiDBCU"
-  },
-  {
-    title: "깐깐한 세금 감시",
-    tag: "예산",
-    summary: "시민의 세금이 꼭 필요한 곳에 쓰이도록 예산 편성부터 집행까지 꼼꼼하게 살피겠습니다.",
-    status: "낭비 없는 생활 예산",
-    videoUrl: "https://youtu.be/3WXZyPo182g"
-  },
-  {
-    title: "불법 홍보관 퇴출",
-    tag: "민생",
-    summary: "주민 피해로 이어질 수 있는 불법·편법 홍보관 문제를 살피고 생활 안전을 지키겠습니다.",
-    status: "민생보호 공약",
-    videoUrl: "https://youtu.be/V-5oD5AiDBY"
+    title: "공약 제목 3",
+    tag: "분야",
+    summary: "공약의 핵심 내용을 2~3문장으로 입력하세요.",
+    status: "추진 방향 또는 상태",
+    videoUrl: ""
   }
 ];
 
 export const district = {
+  sourceLabel: "공개자료 기준일을 입력하세요",
   total: {
-    population: "65,804명",
-    households: "34,856세대",
-    area: "18.80㎢"
+    population: "입력 전",
+    households: "입력 전",
+    area: "입력 전"
   },
   towns: [
     {
-      name: "명곡동",
-      area: "6.62㎢",
-      population: "37,745명",
-      households: "18,200세대",
-      units: "86통 440반",
-      note: "1997년 7월 14일 도계, 명서1, 명서2동이 명곡동으로 통합"
+      name: "동/읍/면 이름",
+      area: "입력 전",
+      population: "입력 전",
+      households: "입력 전",
+      units: "행정구역 정보",
+      note: "지역 특징이나 주요 현안을 입력하세요."
     },
     {
-      name: "봉림동",
-      area: "12.18㎢",
-      population: "28,059명",
-      households: "16,656세대",
-      units: "62통 295반",
-      note: "경남도청 등 도 단위 기관 소재, KTX 창원중앙역과 도로망이 만나는 교통 요충지"
+      name: "동/읍/면 이름",
+      area: "입력 전",
+      population: "입력 전",
+      households: "입력 전",
+      units: "행정구역 정보",
+      note: "지역 특징이나 주요 현안을 입력하세요."
     }
   ]
 };
 
-export const activities = [
-  "SNS 공약 카드뉴스",
-  "현장 인사와 동네 소식",
-  "주민 제안과 생활 의제"
-];
+export const activities = ["현장 인사", "정책 카드뉴스", "주민 제안 접수"];
+
+export const socialLinks = {
+  instagram: "",
+  youtube: ""
+};
+
+export const featuredVideo = {
+  enabled: false,
+  youtubeId: "",
+  label: "Campaign TV",
+  title: "후보 영상",
+  storageKey: "candidate-video-popup-hidden-date"
+};
 
 export type MapCategory = "지역거점" | "공약" | "활동";
 
@@ -107,85 +134,46 @@ export type MapPin = {
   status: string;
 };
 
+export const mapCenter = {
+  lat: 37.5665,
+  lng: 126.978
+};
+
 export const mapFilters = ["전체", "지역거점", "공약", "활동"] as const;
 
 export const mapPins: MapPin[] = [
   {
-    id: "myeonggok-center",
-    title: "명곡동 행정복지센터 일대",
+    id: "campaign-office",
+    title: "선거사무소 또는 주요 거점",
     category: "지역거점",
-    district: "명곡동",
-    summary: "명곡동 주민 생활과 행정 민원이 만나는 중심 생활권입니다.",
-    lat: 35.2588,
-    lng: 128.6371,
+    district: site.neighborhood,
+    summary: "선거사무소, 현장 사무실, 주요 생활권 거점 설명을 입력하세요.",
+    lat: mapCenter.lat,
+    lng: mapCenter.lng,
     pinColor: "#004EA2",
-    status: "생활권"
+    status: "거점"
   },
   {
-    id: "bongnim-center",
-    title: "봉림동 행정복지센터 일대",
-    category: "지역거점",
-    district: "봉림동",
-    summary: "봉림동 주민의 이동, 교육, 행정 수요가 이어지는 생활 거점입니다.",
-    lat: 35.2447,
-    lng: 128.6857,
+    id: "policy-place",
+    title: "공약 관련 현장",
+    category: "공약",
+    district: site.neighborhood,
+    summary: "공약과 연결되는 지역 현장 또는 개선 대상지를 입력하세요.",
+    lat: mapCenter.lat + 0.006,
+    lng: mapCenter.lng + 0.006,
+    pinColor: "#E51B35",
+    status: "공약"
+  },
+  {
+    id: "activity-place",
+    title: "현장 활동 지점",
+    category: "활동",
+    district: site.neighborhood,
+    summary: "후보자의 현장 활동, 주민 간담회, 캠페인 장소를 입력하세요.",
+    lat: mapCenter.lat - 0.006,
+    lng: mapCenter.lng - 0.006,
     pinColor: "#26A7DF",
-    status: "생활권"
-  },
-  {
-    id: "second-language",
-    title: "제2외국어 교육 접근성",
-    category: "공약",
-    district: "명곡·봉림",
-    summary: "멀리 가지 않아도 배움의 기회를 넓히는 교육 공약입니다.",
-    lat: 35.2513,
-    lng: 128.6601,
-    pinColor: "#E51B35",
-    status: "교육"
-  },
-  {
-    id: "pocket-parking",
-    title: "포켓 주차장으로 주차난 해소",
-    category: "공약",
-    district: "명곡·봉림",
-    summary: "생활권 안의 작은 공간부터 다시 살피는 주차난 완화 공약입니다.",
-    lat: 35.2565,
-    lng: 128.6483,
-    pinColor: "#005BAC",
-    status: "교통"
-  },
-  {
-    id: "resident-council",
-    title: "한국·외국 거주민 상생협의체",
-    category: "공약",
-    district: "창원시 다선거구",
-    summary: "다양한 주민이 함께 안전하게 살아가는 상생 도시 공약입니다.",
-    lat: 35.2478,
-    lng: 128.6717,
-    pinColor: "#0099D8",
-    status: "상생"
-  },
-  {
-    id: "tax-watch",
-    title: "깐깐한 세금 감시",
-    category: "공약",
-    district: "창원시 다선거구",
-    summary: "동네에 필요한 예산은 챙기고 낭비는 줄이는 예산 감시 공약입니다.",
-    lat: 35.2381,
-    lng: 128.6811,
-    pinColor: "#003476",
-    status: "예산"
-  },
-  {
-    id: "illegal-promo-center",
-    title: "불법 홍보관 퇴출",
-    category: "공약",
-    district: "명곡·봉림",
-    summary: "주민 피해를 막기 위한 민생보호 공약입니다.",
-    lat: 35.2418,
-    lng: 128.6546,
-    pinColor: "#E51B35",
-    status: "민생"
+    status: "활동"
   }
 ];
 
@@ -198,11 +186,9 @@ export const primaryNavLinks = [
 export const menuLinks = [
   { label: "홈", href: "/#top", description: "메인으로 돌아가기" },
   { label: "소개", href: "/#profile", description: "후보 이력과 공개자료" },
-  { label: "지도", href: "/#map", description: "명곡·봉림 소통지도" },
-  { label: "공약", href: "/policies/", description: "생활 공약 자세히 보기" },
-  { label: "동네", href: "/district/", description: "명곡·봉림 생활권 정보" },
-  { label: "활동", href: "/activities/", description: "카드뉴스와 현장 소식" },
-  { label: "문의", href: "/contact/", description: "동네 제안 남기기" }
+  { label: "지도", href: "/#map", description: "지역 소통지도" },
+  { label: "공약", href: "/policies/", description: "핵심 공약 자세히 보기" },
+  { label: "지역", href: "/district/", description: "지역구 생활권 정보" },
+  { label: "활동", href: "/activities/", description: "현장 소식과 카드뉴스" },
+  { label: "문의", href: "/contact/", description: "주민 제안 남기기" }
 ];
-
-export const instagramUrl = "https://www.instagram.com/seongguk_ryu99?igsh=M2pnaHAwY3czd2d6";

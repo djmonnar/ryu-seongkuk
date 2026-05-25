@@ -1,13 +1,21 @@
-# 류성국 시의원 후보 홈페이지
+# 후보자 홈페이지 템플릿
 
-더불어민주당 창원시 다선거구(명곡·봉림) 류성국 후보 소개용 원페이지 홈페이지입니다.
+국회의원, 지방선거 후보자, 캠프 소개용 홈페이지를 빠르게 만들기 위한 Next.js 정적 사이트 템플릿입니다.
 
-## 작업 기준
+## 빠른 수정 순서
 
-- Next.js + TypeScript + Tailwind CSS
-- GitHub Pages 정적 배포
-- 후보 정보와 공약은 확인된 자료만 표시
-- 확인 전 연락처, 선거사무소, 공약 세부안은 준비 중 처리
+1. `src/data/candidate.ts`에서 후보명, 정당명, 지역명, 슬로건, 약력, 공약, 지역 정보, 지도 핀을 입력합니다.
+2. `public/images/`의 대표 이미지와 공유 이미지를 후보자별 이미지로 교체합니다.
+3. `site.siteUrl`을 실제 도메인으로 바꿉니다.
+4. 영상 팝업을 쓰려면 `featuredVideo.enabled`를 `true`로 바꾸고 `youtubeId`를 입력합니다.
+
+## 주요 파일
+
+- `src/data/candidate.ts`: 후보자 정보 입력 파일
+- `components/`: 화면 구성 요소
+- `app/`: Next.js 페이지
+- `public/images/`: 히어로, 정당 로고, 공유 이미지
+- `TEMPLATE_GUIDE.md`: 새 후보 사이트 제작 체크리스트
 
 ## 실행
 
@@ -16,7 +24,6 @@ npm install
 npm run dev
 ```
 
-## 이미지
+## 배포
 
-- PC 히어로: `public/images/hero-wide.png`
-- 모바일 히어로: `public/images/hero-mobile.png`
+`main` 브랜치에 푸시하면 GitHub Actions가 정적 사이트를 빌드해 GitHub Pages로 배포합니다.
