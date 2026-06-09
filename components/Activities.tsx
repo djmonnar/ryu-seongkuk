@@ -18,7 +18,7 @@ export function Activities() {
           <div className="relative min-h-[280px] overflow-hidden rounded-lg border border-white/10 bg-white/10 shadow-civic" data-reveal style={{ "--index": 1 } as CSSProperties & Record<"--index", number>}>
             <Image
               src={assetPath("/images/activities-square.png")}
-              alt="류성국 의정활동과 주민 소통 이미지"
+              alt="류성국 의정활동과 주민소통 이미지"
               fill
               sizes="(min-width: 1024px) 32vw, 100vw"
               className="object-cover"

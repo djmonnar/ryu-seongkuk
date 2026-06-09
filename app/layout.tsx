@@ -29,14 +29,14 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         type: "image/jpeg",
-        alt: `${site.domain} 카카오톡 공유 이미지`
+        alt: "류성국.kr 공유용 대표 이미지"
       },
       {
         url: `${siteUrl}/images/share-message.jpg`,
         width: 1080,
         height: 1080,
         type: "image/jpeg",
-        alt: `${site.domain} 공유 썸네일`
+        alt: "류성국 정사각형 공유 썸네일"
       }
     ]
   },
