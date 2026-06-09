@@ -1,7 +1,6 @@
 import { Hero } from "@/components/Hero";
 import { MapSection } from "@/components/MapSection";
 import { Profile } from "@/components/Profile";
-import { VideoPopup } from "@/components/VideoPopup";
 
 export default function Home() {
   return (
@@ -9,7 +8,6 @@ export default function Home() {
       <Hero />
       <Profile />
       <MapSection />
-      <VideoPopup />
     </main>
   );
 }
