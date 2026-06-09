@@ -124,7 +124,7 @@ export function NaverMap({ pins, selectedPin, onSelectPin }: NaverMapProps) {
 
   return (
     <div className="relative h-[560px] min-h-[560px] overflow-hidden rounded-lg border border-slate-200 bg-white shadow-civic md:h-[520px] md:min-h-[520px]">
-      <div ref={mapElementRef} className="h-full w-full" aria-label="네이버 지도 기반 명곡·봉림 소통지도" />
+      <div ref={mapElementRef} className="h-full w-full" aria-label="네이버 지도 기반 명곡·봉림 생활 현안 지도" />
 
       {status === "loading" ? (
         <div className="absolute inset-0 grid place-items-center bg-dem-pale text-sm font-black text-ink">

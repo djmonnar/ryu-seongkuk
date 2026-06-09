@@ -56,18 +56,18 @@ export function MapSection() {
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
             eyebrow="Communication Map"
-            title="명곡·봉림 소통지도"
-            description="생활권, 공약, 현장 활동을 지도 위에서 한눈에 볼 수 있도록 정리했습니다."
+            title="명곡·봉림 생활 현안 지도"
+            description="생활거점, 주민제안, 점검 중인 약속 이행 과제를 지도 위에서 함께 확인합니다."
           />
           <p className="rounded-lg border border-dem-blue/20 bg-white p-5 text-sm font-black leading-6 text-dem-blue shadow-civic-soft" data-reveal style={{ "--index": 1 } as CSSProperties & Record<"--index", number>}>
-            우리 동네의 변화가 필요한 곳을 지도 위에서 함께 확인합니다.
+            주민 제안과 현장 점검 기록을 의정활동의 출발점으로 삼겠습니다.
           </p>
         </div>
 
         <div className="relative mt-10 min-h-[250px] overflow-hidden rounded-lg border border-white bg-dem-pale shadow-civic md:min-h-[360px]" data-reveal style={{ "--index": 2 } as CSSProperties & Record<"--index", number>}>
           <Image
             src={assetPath("/images/district-map-visual.png")}
-            alt="명곡·봉림 생활권을 상징하는 밝은 도시 일러스트"
+            alt="명곡·봉림 생활 현안 지도 이미지"
             fill
             sizes="100vw"
             className="object-cover"
@@ -98,9 +98,9 @@ export function MapSection() {
           <aside className="hidden lg:sticky lg:top-24 lg:block lg:self-start" aria-label="선택한 지도 핀 상세">
             {selectedPin ? <PinDetail pin={selectedPin} /> : null}
             <div className="civic-card mt-4 p-5">
-              <h3 className="text-base font-black text-ink">소통지도 안내</h3>
+              <h3 className="text-base font-black text-ink">생활 현안 지도 안내</h3>
               <p className="mt-3 text-sm font-bold leading-6 text-slate-600">
-                생활권과 공약 의제를 연결해 명곡·봉림의 변화를 더 선명하게 보여드립니다.
+                기존 지도 자료를 바탕으로 약속 이행과 주민 제안의 흐름을 더 선명하게 정리하겠습니다.
               </p>
             </div>
           </aside>

@@ -33,18 +33,18 @@ export function VideoPopup() {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[80] grid place-items-center bg-ink/72 px-3 py-5 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label="류성국 후보 영상">
+    <div className="fixed inset-0 z-[80] grid place-items-center bg-ink/72 px-3 py-5 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label="류성국 활동 영상">
       <div className="w-full max-w-3xl overflow-hidden rounded-lg bg-white shadow-[0_30px_120px_rgba(0,20,60,0.42)]">
         <div className="bg-dem-deep px-4 py-3 text-white sm:px-6 sm:py-4">
           <p className="text-[11px] font-black uppercase text-dem-sky">Ryu Seongguk TV</p>
-          <h2 className="mt-1 text-lg font-black leading-snug sm:text-2xl">류성국 후보 영상</h2>
+          <h2 className="mt-1 text-lg font-black leading-snug sm:text-2xl">류성국 활동 영상</h2>
         </div>
 
         <div className="aspect-video bg-black">
           <iframe
             className="h-full w-full"
             src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1`}
-            title="류성국 후보 영상"
+            title="류성국 활동 영상"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           />

@@ -1,5 +1,7 @@
+import Image from "next/image";
 import type { CSSProperties } from "react";
 import { district, site } from "@/src/data/candidate";
+import { assetPath } from "@/src/data/paths";
 import { SectionHeading } from "@/components/SectionHeading";
 
 const totalStats = [
@@ -14,12 +16,22 @@ export function District() {
       <div className="section-shell">
         <SectionHeading
           eyebrow="District"
-          title={`우리동네 ${site.neighborhood}`}
-          description="명곡과 봉림의 생활권 정보를 한눈에 확인할 수 있도록 정리했습니다."
+          title={`${site.neighborhood}, 류성국의 의정 출발점`}
+          description="주거, 교육, 교통, 행정, 돌봄이 이어지는 명곡·봉림 생활권의 작은 불편부터 살피겠습니다."
           align="center"
         />
 
-        <div className="mt-10 grid gap-3 sm:grid-cols-3">
+        <div className="relative mt-10 min-h-[280px] overflow-hidden rounded-lg border border-white bg-dem-pale shadow-civic md:min-h-[420px]" data-reveal>
+          <Image
+            src={assetPath("/images/district-hero.png")}
+            alt="명곡·봉림 생활권 소개 이미지"
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+        </div>
+
+        <div className="mt-8 grid gap-3 sm:grid-cols-3">
           {totalStats.map((stat, index) => (
             <div
               key={stat.label}
@@ -30,6 +42,14 @@ export function District() {
               <p className="text-sm font-black text-white/70">{stat.label}</p>
               <p className="mt-2 text-3xl font-black">{stat.value}</p>
             </div>
+          ))}
+        </div>
+
+        <div className="mt-6 flex gap-2 overflow-x-auto pb-2" aria-label="생활권 주요 의제">
+          {district.agendas.map((agenda) => (
+            <span key={agenda} className="min-h-10 shrink-0 rounded-full border border-dem-blue/20 bg-white px-4 py-2 text-sm font-black text-dem-blue shadow-civic-soft">
+              {agenda}
+            </span>
           ))}
         </div>
 

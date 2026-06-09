@@ -1,12 +1,12 @@
 import Image from "next/image";
 import type { CSSProperties } from "react";
-import { district, site } from "@/src/data/candidate";
+import { site } from "@/src/data/candidate";
 import { assetPath } from "@/src/data/paths";
 
 const quickStats = [
   { label: "지역구", value: site.neighborhood },
-  { label: "인구", value: district.total.population },
-  { label: "세대", value: district.total.households }
+  { label: "역할", value: site.currentStatus },
+  { label: "방향", value: "약속 이행 공개" }
 ];
 
 export function Hero() {
@@ -15,7 +15,7 @@ export function Hero() {
       <div className="relative min-h-[calc(100dvh-80px)] overflow-hidden md:min-h-[760px]">
         <Image
           src={assetPath("/images/hero-wide.png")}
-          alt="우리동네 젊은 일꾼 류성국 후보"
+          alt="창원시의원 당선인 류성국 메인 비주얼"
           fill
           priority
           sizes="100vw"
@@ -23,7 +23,7 @@ export function Hero() {
         />
         <Image
           src={assetPath("/images/hero-mobile.png")}
-          alt="우리동네 젊은 일꾼 류성국 후보"
+          alt="창원시의원 당선인 류성국 모바일 메인 비주얼"
           fill
           priority
           sizes="100vw"
@@ -35,24 +35,24 @@ export function Hero() {
         <div className="section-shell relative z-10 flex min-h-[calc(100dvh-80px)] flex-col justify-end pb-5 pt-8 md:min-h-[760px] md:pb-8">
           <div className="sr-only">
             <h1>
-              {site.name} {site.ballotLabel}
+              {site.currentStatus} {site.name} - {site.neighborhood}의 약속, 이제 의정으로 증명하겠습니다.
             </h1>
             <p>
-              {site.party} {site.district} {site.neighborhood}. {site.slogan}
+              {site.party} {site.district} {site.neighborhood}. {site.mainMessage}
             </p>
           </div>
 
           <div className="civic-panel hidden max-w-[420px] p-5 text-ink backdrop-blur lg:absolute lg:bottom-8 lg:right-10 lg:block" data-reveal>
             <p className="civic-eyebrow">Changwon · Myunggok Bongnim</p>
-            <h2 className="mt-3 text-3xl font-black leading-snug">{site.secondMessage}</h2>
-            <p className="mt-3 text-sm font-bold leading-6 text-slate-600">{site.message}</p>
+            <h2 className="mt-3 text-3xl font-black leading-snug">{site.mainMessage}</h2>
+            <p className="mt-3 text-sm font-bold leading-6 text-slate-600">{site.subMessage}</p>
             <div className="mt-5 grid grid-cols-2 gap-2">
               <a href="/policies/" className="civic-button-primary min-h-12 px-4 text-xs">
-                <span>공약 보기</span>
+                <span>약속 이행 보기</span>
                 <span className="ml-2 grid h-7 w-7 place-items-center rounded-full bg-white/[0.16]">→</span>
               </a>
-              <a href="/#profile" className="civic-button-outline min-h-12 px-4 text-xs">
-                후보 소개
+              <a href="/contact/" className="civic-button-outline min-h-12 px-4 text-xs">
+                주민 제안하기
               </a>
             </div>
           </div>

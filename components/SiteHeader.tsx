@@ -16,7 +16,7 @@ export function SiteHeader() {
       <div className="mx-auto flex h-[68px] w-full max-w-4xl items-center justify-between gap-4 rounded-full border border-white/70 bg-white/[0.88] px-5 shadow-[0_18px_55px_rgba(0,43,94,0.13)] ring-1 ring-dem-blue/5 backdrop-blur-xl sm:px-6">
         <a href="/#top" onClick={closeMenu} className="group flex min-w-0 items-center gap-3" aria-label="류성국 홈페이지 처음으로">
           <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-dem-blue text-lg font-black text-white shadow-[0_10px_26px_rgba(0,78,162,0.22)] transition duration-500 group-hover:scale-[1.04]">
-            1가
+            류
           </span>
           <span className="min-w-0">
             <span className="flex items-center gap-2">
@@ -24,7 +24,7 @@ export function SiteHeader() {
               <img src={assetPath("/images/minjoo-symbol.svg")} alt="더불어민주당" className="hidden h-5 w-auto sm:block" />
             </span>
             <span className="block truncate text-[11px] font-extrabold text-dem-blue sm:text-xs">
-              {site.neighborhood} 더불어민주당
+              {site.currentStatus} · {site.neighborhood}
             </span>
           </span>
         </a>
