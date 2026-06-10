@@ -35,15 +35,15 @@ export function ThanksPopup() {
     >
       <div className="popup-card w-[min(92vw,520px)] overflow-hidden rounded-lg bg-white shadow-[0_30px_120px_rgba(0,20,60,0.42)]">
         <div className="sr-only">
-          <h2 id="thanks-popup-title">당선에 감사드립니다</h2>
+          <h2 id="thanks-popup-title">감사드립니다</h2>
           <p id="thanks-popup-description">
-            명곡·봉림 주민 여러분의 선택을 무겁게 받겠습니다. 선거 때 드린 약속을 말로 끝내지 않고 의정활동으로 하나씩 증명하겠습니다. 창원시의원 당선인 류성국.
+            명곡·봉림 주민 여러분의 선택을 무겁게 받겠습니다. 선거 때 드린 약속을 말로 끝내지 않고 의정활동으로 하나씩 증명하겠습니다. 창원시의원 류성국.
           </p>
         </div>
 
         <img
           src={assetPath("/images/thanks-popup.webp")}
-          alt="창원시의원 당선인 류성국 당선 감사 메시지"
+          alt="창원시의원 류성국 감사 메시지"
           className="max-h-[68dvh] w-full bg-white object-contain"
         />
 

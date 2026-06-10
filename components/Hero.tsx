@@ -15,7 +15,7 @@ export function Hero() {
       <div className="relative min-h-[calc(100dvh-80px)] overflow-hidden md:min-h-[760px]">
         <Image
           src={assetPath("/images/hero-wide.png")}
-          alt="창원시의원 당선인 류성국 메인 비주얼"
+          alt="창원시의원 류성국 메인 비주얼"
           fill
           priority
           sizes="100vw"
@@ -23,7 +23,7 @@ export function Hero() {
         />
         <Image
           src={assetPath("/images/hero-mobile.png")}
-          alt="창원시의원 당선인 류성국 모바일 메인 비주얼"
+          alt="창원시의원 류성국 모바일 메인 비주얼"
           fill
           priority
           sizes="100vw"

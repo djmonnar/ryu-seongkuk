@@ -4,13 +4,13 @@ export const site = {
   party: "더불어민주당",
   district: "창원시 다선거구",
   neighborhood: "명곡·봉림",
-  currentStatus: "창원시의원 당선인",
-  officeTitle: "창원시의원 당선인",
+  currentStatus: "창원시의원",
+  officeTitle: "창원시의원",
   futureOfficeTitle: "창원시의원",
   slogan: "우리동네 젊은 일꾼",
   mainMessage: "명곡·봉림의 약속, 이제 의정으로 증명하겠습니다.",
   subMessage: "주민의 목소리를 듣고, 예산을 살피고, 생활의 변화를 만들겠습니다.",
-  description: "창원시 다선거구 명곡·봉림 류성국 창원시의원 당선인의 약속 이행, 의정활동, 주민 제안을 기록하는 공식 홈페이지입니다.",
+  description: "창원시 다선거구 명곡·봉림 류성국 창원시의원의 약속 이행, 의정활동, 주민 제안을 기록하는 공식 홈페이지입니다.",
   domain: "류성국.kr"
 };
 
@@ -122,7 +122,7 @@ export const district = {
 
 export const activityRecords = [
   {
-    title: "당선 감사 인사",
+    title: "감사 인사",
     category: "현장활동",
     summary: "보내주신 선택의 무게를 잊지 않고 의정활동으로 보답하겠습니다.",
     status: "기록 준비중"
